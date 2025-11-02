@@ -81,11 +81,11 @@ export const projects = [{
     description: 'An independent software project to develop a lightweight 3D engine in Python using PyOpenGL for rapid prototyping of scientific simulations and animations.',
     link: 'https://github.com/PhalcoAi/PhalcoPulse',
     tags: ['PyOpenGL', 'Python', '3D Graphics', 'Scientific Visualization', 'Simulation'],
-    image: 'https://images.unsplash.com/photo-1593349480503-64d42da14940?w=600',
+    image: 'https://github.com/PhalcoAi/PhalcoPulse/blob/main/docs/PhalcoPulseStudio.gif?raw=true',
     stars: 42, // You can update this value
 }, {
     date: '2025-10-10',
-    category: ['presentation'],
+    category: ['presentation', 'publication'],
     title: 'Hyper-Yoshimura: Unleashing Meta-Stability in Deployable Robots',
     venue: 'ME4734 Robotics and Mechanisms Seminar, Virginia Tech',
     link: '#', // Add link to slides if available
@@ -152,7 +152,7 @@ export const projects = [{
     description: 'A model exploring pattern adaptation in biology (e.g., animal coats) using cellular automata. Final project for a Mathematical Biology course.',
     link: 'https://github.com/YogeshPhalak/Natural-Pattern-Adaptation-CA',
     tags: ['Cellular Automata', 'Computational Biology', 'Pattern Formation', 'Python'],
-    image: 'https://images.unsplash.com/photo-1575899919539-774b31a806a8?w=600',
+    image: 'https://github.com/YogeshPhalak/Natural-Pattern-Adaptation-CA/raw/main/img/host_parasite1.gif',
     stars: 2,
 }, {
     date: '2022-12-07',
@@ -161,7 +161,7 @@ export const projects = [{
     description: 'A simple snake game developed with OpenGL that uses a discrete snake robot model to produce realistic slithering movements.',
     link: 'https://github.com/YogeshPhalak/Snake-Game-With-Realistic-Snake-Gaits',
     tags: ['C++', 'OpenGL', 'Game Development', 'Snake Gaits', 'Robotics'],
-    image: 'https://images.unsplash.com/photo-1578344115789-18395f171c7b?w=600',
+    image: 'https://github.com/YogeshPhalak/Snake-Game-With-Realistic-Snake-Gaits/raw/master/Media/SnakeGame.gif?w=600',
     stars: 9,
 }, {
     date: '2021-10-27',
@@ -173,13 +173,22 @@ export const projects = [{
     image: 'https://images.unsplash.com/photo-1554310624-78e015822e1a?w=600',
     stars: 5,
 }, {
+    date: '2022-12-07',
+    category: ['repository', 'graphics'],
+    title: 'Image Compression with Haar Wavelets',
+    description: 'A Python implementation of image compression and reconstruction using the Discrete Haar Wavelet Transform for decomposition and thresholding.',
+    link: 'https://github.com/YogeshPhalak/Wavelet-Analysis-Image-Compression-Using-Discrete-Haar-Wavelet-Transform',
+    tags: ['Python', 'Image Compression', 'Wavelet Transform', 'Haar Wavelet', 'NumPy', 'OpenCV'],
+    image: 'https://github.com/YogeshPhalak/Wavelet-Analysis-Image-Compression-Using-Discrete-Haar-Wavelet-Transform./raw/master/media/Haar.gif?w=600',
+    stars: 1,
+}, {
     date: '2020-08-28',
     category: ['repository'],
     title: 'Simulation of Snake Locomotion Mechanisms',
     description: 'MATLAB implementation of various snake gaits (e.g., lateral undulation) on a simplified kinematical model of a discrete snake robot.',
     link: 'https://github.com/YogeshPhalak/Simulation-of-the-Snake-locomotion-mechanisms',
     tags: ['MATLAB', 'Snake Robot', 'Kinematics', 'Gait Simulation'],
-    image: 'https://images.unsplash.com/photo-1629813254593-277e394337a6?w=600',
+    image: 'https://github.com/YogeshPhalak/Simulation-of-the-Snake-locomotion-mechanisms/raw/master/Media/SWDG_A_3_5.gif?w=600',
     stars: 38,
 }, {
     date: '2020-08-18',
@@ -192,7 +201,7 @@ export const projects = [{
     stars: 15,
 }, {
     date: '2020-08-01',
-    category: ['publication'],
+    category: ['publication', 'hardware'],
     title: 'Design and Development of an Autonomous Delivery Robot',
     venue: 'Bachelor\'s Thesis, VNIT Nagpur (Published on arXiv)',
     link: 'https://arxiv.org/pdf/2103.09229.pdf',
@@ -201,7 +210,7 @@ export const projects = [{
     impact: 'Milestone',
 }, {
     date: '2019-03-01',
-    category: ['research'],
+    category: ['research', 'hardware'],
     title: 'Artificial Neural Networks with Analog Circuits',
     description: 'Designed and implemented basic logic gates on a hardware-level Artificial Neural Network built with operational amplifiers.',
     link: 'https://drive.google.com/open?id=1ynYknlomjIvRUBmrQ20zmbIQ3V409FG2',
