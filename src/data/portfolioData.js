@@ -1,6 +1,6 @@
 // file: portfolioData.js
 import {
-    Brain, Cpu, GraduationCap, Zap, BookOpen, Code, Users,
+    GraduationCap, BookOpen, Code, Users,
 } from 'lucide-react';
 
 // Data for Journey section
