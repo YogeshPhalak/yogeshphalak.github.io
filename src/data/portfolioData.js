@@ -230,11 +230,9 @@ export const projects = [{
 export const skills = {
     'Research & Modeling': {
         items: [{name: 'Nonlinear Dynamics & Chaos', level: 5}, {
-            name: 'Physical Reservoir Computing',
-            level: 5
+            name: 'Physical Reservoir Computing', level: 5
         }, {name: 'Reduced-Order Modeling', level: 4}, {
-            name: 'Biomechanics & Animal Locomotion',
-            level: 4
+            name: 'Biomechanics & Animal Locomotion', level: 4
         }, {name: 'Continuum & Solid Mechanics', level: 3}, {name: 'Mathematical Modeling', level: 4},], colors: {
             light: {
                 bg: 'bg-purple-500', gradient: 'from-purple-500 to-indigo-500', shadow: 'shadow-purple-500/50',
@@ -244,11 +242,9 @@ export const skills = {
         }
     }, 'Robotics & Control': {
         items: [{name: 'Control Systems Design', level: 4}, {
-            name: 'Robotics Kinematics & Dynamics',
-            level: 4
+            name: 'Robotics Kinematics & Dynamics', level: 4
         }, {name: 'Localization & Navigation (SLAM)', level: 4}, {
-            name: 'Robot Operating System (ROS)',
-            level: 3
+            name: 'Robot Operating System (ROS)', level: 3
         }, {name: 'UAV/Drone Systems', level: 4}, {name: 'Multi-Robot Systems', level: 3},], colors: {
             light: {
                 bg: 'bg-blue-500', gradient: 'from-blue-500 to-cyan-500', shadow: 'shadow-blue-500/50',
@@ -258,11 +254,9 @@ export const skills = {
         }
     }, 'Software & Technical Stack': {
         items: [{name: 'Python (NumPy, SciPy)', level: 5}, {
-            name: 'MATLAB & Simulink',
-            level: 5
+            name: 'MATLAB & Simulink', level: 5
         }, {name: 'GPU Computing (PyOpenGL)', level: 3}, {name: 'C & C++', level: 3}, {
-            name: 'Version Control (Git)',
-            level: 4
+            name: 'Version Control (Git)', level: 4
         }, {name: 'Containerization (Docker)', level: 2},], colors: {
             light: {
                 bg: 'bg-emerald-500', gradient: 'from-emerald-500 to-green-500', shadow: 'shadow-emerald-500/50',
@@ -272,11 +266,9 @@ export const skills = {
         }
     }, 'Prototyping & Hardware': {
         items: [{name: 'CAD Modeling (SolidWorks, Fusion360)', level: 4}, {
-            name: 'Embedded Systems (Arduino)',
-            level: 3
+            name: 'Embedded Systems (Arduino)', level: 3
         }, {name: 'Circuit Design & Simulation (MultiSim)', level: 3}, {
-            name: 'Rapid Prototyping & Fabrication',
-            level: 3
+            name: 'Rapid Prototyping & Fabrication', level: 3
         }, {name: 'Hardware Testing & Validation', level: 4}, {name: 'Sensor Integration', level: 3},], colors: {
             light: {
                 bg: 'bg-rose-500', gradient: 'from-rose-500 to-pink-500', shadow: 'shadow-rose-500/50',
@@ -514,6 +506,59 @@ export const photos = [{
     description: "A weathered, leafless tree stands prominently on a hillside, overlooking rolling autumn forests under a dramatic, cloud-filled sky touched by the warm glow of the setting sun."
 },];
 
+// Data for the Charcoal Sketching gallery.
+// Replace these with your own images and dimensions.
+
+export const sketches = [{
+    src: '/images/sketchbook/7c1cfa963e7f.jpg',
+    width: 1920,
+    height: 2175,
+    title: "Lines of Thought",
+    description: "A contemplative graphite portrait of a woman, with drawing tools beside it, captures a quiet moment of artistic creation."
+}, {
+    src: '/images/sketchbook/6023e949e994.jpg',
+    width: 1920,
+    height: 1433,
+    title: "Pencil & Progress",
+    description: "Two engaging pencil portraits, along with art supplies and technical documents, reveal a workspace where creativity and academic pursuits beautifully intertwine."
+}, {
+    src: '/images/sketchbook/5989506df604.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Silent Gaze in Charcoal",
+    description: "A striking monochromatic portrait of a woman with a bindi, her intense gaze rendered through bold charcoal strokes on textured paper."
+}, {
+    src: '/images/sketchbook/46519bc35a62.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Graphite Grin",
+    description: "A joyful, closed-eyed smile radiates from this expressive monochrome sketch, created with the pencil visible alongside the artwork."
+}, {
+    src: '/images/sketchbook/0b2ad3e673be.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Silent Reflection",
+    description: "A charcoal portrait captures a woman with closed eyes and traditional adornments, embodying a serene moment of deep introspection."
+}, {
+    src: '/images/sketchbook/4790e1b3f53d.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Melody in Graphite",
+    description: "An expressive pencil portrait captures a woman with a bindi and flowing dark hair, holding a flute to her lips with a captivating gaze."
+}, {
+    src: '/images/sketchbook/4ba79f324441.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Scars and Stare",
+    description: "This intense graphite portrait features a rugged man with an unflinching gaze and prominent facial scars, rendered with expressive, textured pencil strokes."
+}, {
+    src: '/images/sketchbook/e38a3c7da69c.jpg',
+    width: 1920,
+    height: 1406,
+    title: "Phantom of the High Seas",
+    description: "A dramatic monochrome sketch captures a large, stylized sailing ship, its weathered sails and hull suggesting a long journey's end or a ghostly presence on the shore."
+},];
+
 
 // Data for Creative/Beyond section
 export const creative = [{
@@ -523,9 +568,9 @@ export const creative = [{
     description: 'Capturing mechanisms in nature',
 }, {
     type: 'Charcoal Sketching',
-    count: 15,
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600',
-    description: 'Anatomical studies and abstracts',
+    count: sketches.length,
+    image: 'https://images.unsplash.com/photo-1505569127510-bde1536937bc?w=600',
+    description: 'Expressive portraits and figure studies',
 }, {
     type: 'Travel',
     count: 12,
