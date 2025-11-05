@@ -238,50 +238,117 @@ export const projects = [{
 
 export const skills = {
     'Research & Modeling': {
-        items: [{name: 'Nonlinear Dynamics & Chaos', level: 5}, {
-            name: 'Physical Reservoir Computing', level: 5
-        }, {name: 'Reduced-Order Modeling', level: 4}, {
-            name: 'Biomechanics & Animal Locomotion', level: 4
-        }, {name: 'Continuum & Solid Mechanics', level: 3}, {name: 'Mathematical Modeling', level: 4},], colors: {
+        items: [{
+            name: 'Nonlinear Dynamics & Chaos',
+            level: 5
+        }, {
+            name: 'Physical Reservoir Computing',
+            level: 5
+        }, {
+            name: 'Reduced-Order Modeling',
+            level: 5
+        }, {
+            name: 'Biomechanics & Animal Locomotion',
+            level: 4
+        }, {
+            name: 'Continuum & Solid Mechanics',
+            level: 3
+        }, {
+            name: 'Mathematical Modeling',
+            level: 4
+        },],
+        colors: {
             light: {
                 bg: 'bg-purple-500', gradient: 'from-purple-500 to-indigo-500', shadow: 'shadow-purple-500/50',
-            }, dark: {
+            },
+            dark: {
                 bg: 'bg-purple-500', gradient: 'from-purple-500 to-indigo-500', shadow: 'shadow-purple-400/50',
             }
         }
-    }, 'Robotics & Control': {
-        items: [{name: 'Control Systems Design', level: 4}, {
-            name: 'Robotics Kinematics & Dynamics', level: 4
-        }, {name: 'Localization & Navigation (SLAM)', level: 4}, {
-            name: 'Robot Operating System (ROS)', level: 3
-        }, {name: 'UAV/Drone Systems', level: 4}, {name: 'Multi-Robot Systems', level: 3},], colors: {
+    },
+    'Robotics & Control': {
+        items: [{
+            name: 'Control Systems Design',
+            level: 4
+        }, {
+            name: 'Robotics Kinematics & Dynamics',
+            level: 4
+        }, {
+            name: 'Localization & Navigation (SLAM)',
+            level: 4
+        }, {
+            name: 'Robot Operating System (ROS)',
+            level: 3
+        }, {
+            name: 'UAV/Drone Systems',
+            level: 4
+        }, {
+            name: 'Multi-Robot Systems',
+            level: 3
+        },],
+        colors: {
             light: {
                 bg: 'bg-blue-500', gradient: 'from-blue-500 to-cyan-500', shadow: 'shadow-blue-500/50',
-            }, dark: {
+            },
+            dark: {
                 bg: 'bg-blue-500', gradient: 'from-blue-500 to-cyan-500', shadow: 'shadow-cyan-400/50',
             }
         }
-    }, 'Software & Technical Stack': {
-        items: [{name: 'Python (NumPy, SciPy)', level: 5}, {
-            name: 'MATLAB & Simulink', level: 5
-        }, {name: 'GPU Computing (PyOpenGL)', level: 3}, {name: 'C & C++', level: 3}, {
-            name: 'Version Control (Git)', level: 4
-        }, {name: 'Containerization (Docker)', level: 2},], colors: {
+    },
+    'Software & Technical Stack': {
+        items: [{
+            name: 'Python',
+            level: 5
+        }, {
+            name: 'MATLAB & Simulink',
+            level: 5
+        }, {
+            name: 'GPU Computing (PyOpenGL, PyCuda)',
+            level: 3
+        }, {
+            name: 'C & C++',
+            level: 3
+        }, {
+            name: 'Version Control (Git)',
+            level: 4
+        }, {
+            name: 'Containerization (Docker)',
+            level: 2
+        },],
+        colors: {
             light: {
                 bg: 'bg-emerald-500', gradient: 'from-emerald-500 to-green-500', shadow: 'shadow-emerald-500/50',
-            }, dark: {
+            },
+            dark: {
                 bg: 'bg-emerald-500', gradient: 'from-emerald-500 to-green-500', shadow: 'shadow-green-400/50',
             }
         }
-    }, 'Prototyping & Hardware': {
-        items: [{name: 'CAD Modeling (SolidWorks, Fusion360)', level: 4}, {
-            name: 'Embedded Systems (Arduino)', level: 3
-        }, {name: 'Circuit Design & Simulation (MultiSim)', level: 3}, {
-            name: 'Rapid Prototyping & Fabrication', level: 3
-        }, {name: 'Hardware Testing & Validation', level: 4}, {name: 'Sensor Integration', level: 3},], colors: {
+    },
+    'Prototyping & Hardware': {
+        items: [{
+            name: 'CAD Modeling (SolidWorks, Fusion360)',
+            level: 5
+        }, {
+            name: 'Embedded Systems (Arduino)',
+            level: 5
+        }, {
+            name: 'Circuit Design & Simulation (MultiSim)',
+            level: 3
+        }, {
+            name: 'Rapid Prototyping & Fabrication',
+            level: 3
+        }, {
+            name: 'Hardware Testing & Validation',
+            level: 4
+        }, {
+            name: 'Sensor Integration',
+            level: 3
+        },],
+        colors: {
             light: {
                 bg: 'bg-rose-500', gradient: 'from-rose-500 to-pink-500', shadow: 'shadow-rose-500/50',
-            }, dark: {
+            },
+            dark: {
                 bg: 'bg-rose-500', gradient: 'from-rose-500 to-pink-500', shadow: 'shadow-pink-400/50',
             }
         }
@@ -319,7 +386,11 @@ export const blogs = [{
 
 // Data for Summary/Stats section
 export const stats = [{
-    label: 'Research Years', value: '6+', icon: GraduationCap, color: 'from-purple-500 to-pink-500', url: '#research',
+    label: 'Research Years',
+    value: '6+',
+    icon: GraduationCap,
+    color: 'from-purple-500 to-pink-500',
+    url: '#research',
 }, {
     label: 'Publications',
     value: '14+',
@@ -327,9 +398,17 @@ export const stats = [{
     color: 'from-blue-500 to-cyan-500',
     url: 'https://scholar.google.com/citations?user=TU2VNd8AAAAJ&hl=en',
 }, {
-    label: 'Projects', value: '8+', icon: Code, color: 'from-green-500 to-emerald-500', url: '#research',
+    label: 'Projects',
+    value: projects.length.toString() + '+',
+    icon: Code,
+    color: 'from-green-500 to-emerald-500',
+    url: '#research',
 }, {
-    label: 'Collaborations', value: '15+', icon: Users, color: 'from-orange-500 to-red-500', url: '',
+    label: 'Collaborations',
+    value: '5+',
+    icon: Users,
+    color: 'from-orange-500 to-red-500',
+    url: '',
 },];
 
 // Data for Photography Gallery
@@ -580,9 +659,11 @@ export const creative = [{
     count: sketches.length,
     image: 'https://images.unsplash.com/photo-1505569127510-bde1536937bc?w=600',
     description: 'Expressive portraits and figure studies',
-}, {
-    type: 'Travel',
-    count: 12,
-    image: 'https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=600',
-    description: 'Adventures and conferences',
-},];
+},
+//     {
+//     type: 'Travel',
+//     count: 12,
+//     image: 'https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=600',
+//     description: 'Adventures and conferences',
+// },
+];

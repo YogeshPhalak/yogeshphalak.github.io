@@ -1,9 +1,10 @@
 // file: About.jsx
 import React from 'react';
 import {motion} from 'framer-motion';
-import {Award} from 'lucide-react';
-import {stats} from '../../data/portfolioData.js'; // Make sure path is correct
-import StatCard from '../ui/StatCard'; // Import the new component
+import {stats} from '../../data/portfolioData.js';
+import StatCard from '../ui/StatCard';
+import SectionTitle from '../ui/Typography/SectionTitle';
+import SectionSubtitle from '../ui/Typography/SectionSubtitle';
 
 const containerVariants = {
     hidden: {}, visible: {

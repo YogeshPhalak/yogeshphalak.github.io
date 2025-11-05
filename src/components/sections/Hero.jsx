@@ -1,3 +1,4 @@
+// file  src/components/sections/Hero.jsx
 import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import {Github, Linkedin, Mail, ChevronDown, GraduationCap, Info} from 'lucide-react';
@@ -26,7 +27,7 @@ const Hero = ({scrollToSection}) => {
             <div className="max-w-5xl text-center relative z-20 mt-16">
                 <div className="relative group flex flex-col items-center">
                     <motion.div
-                        className="absolute bottom-0 w-[372px] h-[372px] md:w-[528px] md:h-[528px] image-fade-mask z-0"
+                        className="absolute bottom-0 w-[300px] h-[300px] sm:w-[372px] sm:h-[372px] md:w-[528px] md:h-[528px] image-fade-mask z-0"
                         initial={{y: "100%", opacity: 0}}
                         animate={{y: "35%", opacity: 1}}
                         transition={{duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2}}
@@ -63,10 +64,10 @@ const Hero = ({scrollToSection}) => {
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.8, delay: 1}}
-                    className="text-2xl md:text-4xl font-light text-slate-800 dark:text-gray-100 mb-6"
+                    className="text-2xl z-20 md:text-4xl font-light text-slate-800 dark:text-gray-100 mb-6"
                 >
                     Exploring{' '}
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r
+                    <span className="bg-clip-text text-transparent z-20 bg-gradient-to-r
                      from-cyan-400 via-blue-500 to-violet-500
                      font-semibold animate-gradient-x drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]">
                         Mechano-Intelligence
@@ -77,7 +78,7 @@ const Hero = ({scrollToSection}) => {
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.8, delay: 1.2}}
-                    className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+                    className="text-lg z-20 md:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
                 >
                     PhD Candidate • Physical Reservoir Computing • Robotics • Nonlinear Dynamics •
                     Physics Modeling & Simulations
@@ -158,3 +159,4 @@ const Hero = ({scrollToSection}) => {
 };
 
 export default Hero;
+

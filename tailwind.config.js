@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -7,6 +8,9 @@ export default {
     darkMode: 'class', // Make sure this is set to 'class'
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+            },
             colors: {
                 background: 'rgb(var(--background) / <alpha-value>)',
                 foreground: 'rgb(var(--foreground) / <alpha-value>)',

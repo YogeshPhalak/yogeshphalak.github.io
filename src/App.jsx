@@ -1,65 +1,90 @@
-// src/App.jsx
+// file : src/App.jsx
 
 import React, {useState, useEffect} from 'react';
 import {Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 
-// Import Pages
 import HomePage from './pages/HomePage';
 import PhotographyPage from './pages/PhotographyPage';
 import CharcoalSketchingPage from './pages/CharcoalSketchingPage';
 
-// Import UI
 import Navigation from './components/ui/Navigation';
 import Footer from './components/ui/Footer';
 import ResumeModal from './components/ui/ResumeModal';
 import BackToTop from './components/ui/BackToTop';
 
+const NAV_HEIGHT_OFFSET = 10;
+
 const App = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [showResumeModal, setShowResumeModal] = useState(false);
-    const [showBackToTop, setShowBackToTop] = useState(false);
+        const [isMenuOpen, setIsMenuOpen] = useState(false);
+        const [showResumeModal, setShowResumeModal] = useState(false);
+        const [showBackToTop, setShowBackToTop] = useState(false);
 
-    const location = useLocation();
-    const navigate = useNavigate();
+        const location = useLocation();
+        const navigate = useNavigate();
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setShowBackToTop(window.scrollY > 300);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        useEffect(() => {
+            const handleScroll = () => {
+                setShowBackToTop(window.scrollY > 300);
+            };
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener('scroll', handleScroll);
+        }, []);
 
-    const scrollToSection = (sectionId) => {
-        setIsMenuOpen(false);
 
-        if (location.pathname !== '/') {
-            navigate(`/#${sectionId}`);
-            return;
-        }
+        useEffect(() => {
+            if (location.pathname === '/' && location.hash) {
+                const sectionId = location.hash.substring(1); // Remove the '#'
 
-        const section = document.getElementById(sectionId);
-        if (section) {
+                setTimeout(() => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const offsetPosition = section.offsetTop - NAV_HEIGHT_OFFSET;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth',
+                        });
+                        setTimeout(() => {
+                            window.history.pushState(null, '', location.pathname);
+                        }, 50); // 1-second delay *after* scroll starts
+                    }
+                }, 500); // 500ms delay to wait for page render
+            }
+        }, [location]);
+
+
+        const scrollToSection = (sectionId) => {
             setTimeout(() => {
-                const elementPosition = section.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.scrollY;
+                setIsMenuOpen(false);
+            }, 1000);
+
+            if (location.pathname !== '/') {
+                navigate(`/#${sectionId}`);
+                return;
+            }
+
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const offsetPosition = section.offsetTop - NAV_HEIGHT_OFFSET;
 
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth',
                 });
-            }, 0);
-        }
-    };
+            }
+        };
 
-    const {pathname} = useLocation();
+        const {pathname} = useLocation();
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
+        useEffect(() => {
+            if (!location.hash) {
+                window.scrollTo({
+                    top: 0, behavior: 'smooth',
+                });
+            }
+        }, [pathname]);
 
-    return (
-        <div className="min-h-screen bg-slate-100 text-slate-900 dark:bg-gray-900 dark:text-white font-sans">
+        return (<div className="min-h-screen bg-slate-100 text-slate-900 dark:bg-gray-900 dark:text-white font-sans">
             <Navigation
                 isMenuOpen={isMenuOpen}
                 setIsMenuOpen={setIsMenuOpen}
@@ -68,7 +93,7 @@ const App = () => {
             />
 
             <Routes>
-                <Route path="/" element={<HomePage/>}/>
+                <Route path="/" element={<HomePage scrollToSection={scrollToSection}/>}/>
                 <Route path="/photography" element={<PhotographyPage/>}/>
                 <Route path="/charcoal-sketching" element={<CharcoalSketchingPage/>}/>
             </Routes>
@@ -84,8 +109,8 @@ const App = () => {
                 showBackToTop={showBackToTop}
                 scrollToSection={scrollToSection}
             />
-        </div>
-    );
-};
+        </div>);
+    }
+;
 
 export default App;

@@ -27,3 +27,26 @@ body {
     background-size: 200% 200%;
     animation: gradient-x 6s ease infinite;
 }
+
+/* Ensure consistent box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Prevent text size adjustments on orientation change (iOS) */
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure body takes full height */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
