@@ -357,35 +357,22 @@ export const skills = {
 
 // Data for Insights/Blog section
 
-export const blogs = [{
-    title: 'Understanding Mechano-Intelligence',
-    excerpt: 'An introduction to how physical systems can compute and process information through their inherent dynamics...',
-    readTime: '5 min',
-    date: 'Oct 2024',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600',
-    tags: ['Theory', 'Introduction'],
-    link: '#',
-}, {
-    title: 'Physical Reservoir Computing Explained',
-    excerpt: 'Breaking down the fundamentals of computation in physical substrates and why it matters for robotics...',
-    readTime: '7 min',
-    date: 'Sep 2024',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600',
-    tags: ['Computing', 'Robotics'],
-    link: '#',
-}, {
-    title: 'The Beauty of Chaos in Engineering',
-    excerpt: 'How chaotic systems can be harnessed for computational purposes and practical applications...',
-    readTime: '6 min',
-    date: 'Aug 2024',
-    image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600',
-    tags: ['Chaos Theory', 'Engineering'],
-    link: '#',
-},];
+export const blogs = [
+    {
+        title: 'How I Built This Portfolio: React & Framer Motion', // Matches the content file slug
+        excerpt: 'A comprehensive guide walking through the architecture, tech stack, and animation strategy used to build this high-performance, interactive portfolio...',
+        slug: 'how-i-built-this-portfolio', // Use this for routing and content file lookup
+        readTime: '10 min',
+        date: 'Oct 2024',
+        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600',
+        tags: ['React', 'Framer Motion', 'Tutorial'],
+    },
+];
 
 
 // Data for Summary/Stats section
-export const stats = [{
+export const stats = [
+    {
     label: 'Research Years',
     value: '6+',
     icon: GraduationCap,
@@ -412,7 +399,8 @@ export const stats = [{
 },];
 
 // Data for Photography Gallery
-export const photos = [{
+export const photos = [
+    {
     src: '/images/gallery/ffb04931e463.jpg',
     width: 1920,
     height: 2560,
@@ -597,7 +585,8 @@ export const photos = [{
 // Data for the Charcoal Sketching gallery.
 // Replace these with your own images and dimensions.
 
-export const sketches = [{
+export const sketches = [
+    {
     src: '/images/sketchbook/7c1cfa963e7f.jpg',
     width: 1920,
     height: 2175,
