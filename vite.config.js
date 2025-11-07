@@ -1,21 +1,15 @@
-// vite.config.js (Simplified Conditional Base Path using command)
+// vite.config.js (Guaranteed Base Path for GitHub Pages Build)
 import {defineConfig} from 'vite';
 
-// Define the name of your repository for the GitHub Pages path
 const repoName = 'yogeshphalak.github.io';
 
-export default defineConfig(({command, mode}) => {
-    // CRITICAL FIX: Base on command (serve vs. build) OR use your custom variable
-    // For maximum reliability, let's combine command and your custom deploy flag for the build.
-
-    const isDeployingToGitHub = mode === 'production' && process.env.VITE_APP_DEPLOY === 'github';
-
+export default defineConfig(({command}) => {
     return {
-        // If the command is 'serve' (local dev), force base to '/'.
-        // If the command is 'build', use your conditional logic to decide the base path.
+        // If the command is 'serve' (local development), base is '/'.
+        // If the command is 'build' (production), base is the repository name.
         base: command === 'serve'
             ? '/'
-            : (isDeployingToGitHub ? `/${repoName}/` : '/'),
+            : `/${repoName}/`, // This guarantees the GitHub Pages path in the final build.
 
         // ... rest of your config (plugins, etc.)
     };
