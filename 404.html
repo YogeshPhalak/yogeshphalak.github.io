@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=./index.html"/>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        // Redirect to index.html and preserve the current path
+        const redirectTo = window.location.protocol + '//' + window.location.host + '/index.html?path=' + encodeURIComponent(window.location.pathname + window.location.search);
+        window.location.replace(redirectTo);
+    </script>
 </head>
-<body>
-</body>
+<body></body>
 </html>
