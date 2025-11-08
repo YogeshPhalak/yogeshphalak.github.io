@@ -1,8 +1,9 @@
-// vite.config.js (Final Attempt - Assuming Domain Root Hosting)
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-export default defineConfig(({command}) => {
-    return {
-        base: '/',
-    };
-});
+// https://vitejs.dev/config/
+export default defineConfig({
+    plugins: [react()],
+    // This line is crucial for GitHub Pages deployment
+    base: '/',
+})

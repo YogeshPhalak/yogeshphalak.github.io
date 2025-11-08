@@ -359,13 +359,13 @@ export const skills = {
 
 export const blogs = [
     {
-        title: 'How I Built This Portfolio: React & Framer Motion', // Matches the content file slug
-        excerpt: 'A comprehensive guide walking through the architecture, tech stack, and animation strategy used to build this high-performance, interactive portfolio...',
-        slug: 'how-i-built-this-portfolio', // Use this for routing and content file lookup
-        readTime: '10 min',
-        date: 'Oct 2024',
-        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600',
-        tags: ['React', 'Framer Motion', 'Tutorial'],
+        title: 'How I Built My React + Tailwind Portfolio (And How You Can Too!)',
+        excerpt: 'A step-by-step guide on building a modern portfolio from scratch using React, Vite, and Tailwind CSS, and deploying it for free to GitHub Pages.',
+        slug: 'how-i-built-this-portfolio', // <-- This MUST match your filename
+        readTime: '8 min', // This is a more accurate estimate for this post
+        date: 'November 2024',
+        image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80',
+        tags: ['React', 'Vite', 'Tailwind CSS', 'GitHub Pages', 'Tutorial', 'Web Development'], // <-- No Framer Motion
     },
 ];
 
