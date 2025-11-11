@@ -12,7 +12,7 @@ export const journey = [{
     description: "Pursuing doctoral research at the DARE Lab, focusing on mechano-intelligence, physical reservoir computing, and high-speed simulation of nonlinear dynamics.",
     location: "Blacksburg, VA",
     category: "Milestone",
-    url: "https://www.vt.edu/"
+    url: "https://news.vt.edu/articles/2025/04/eng-me-clahs-nsf-efri-pericyte-computer.html"
 }, {
     id: 2,
     date: "May 2025",
