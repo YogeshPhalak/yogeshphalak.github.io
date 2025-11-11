@@ -13,8 +13,15 @@
         }
 
         @page {
-            size: letter;
-            margin: 0;
+            size: auto; /* Or use the dynamic size from the script if needed */
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .resume-container {
+            /* This ensures the content itself stretches to the full height */
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
         body {
@@ -22,11 +29,12 @@
             line-height: 1.4;
             color: #2d3748;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0 !important;
+            margin: 0 !important;
         }
 
         .resume-container {
@@ -98,13 +106,19 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             animation: pulse 4s ease-in-out infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
 
         .header-content {
@@ -272,8 +286,13 @@
             transition: all 0.3s ease;
         }
 
-        .skill-category:nth-child(3n+2) { border-left-color: #48bb78; }
-        .skill-category:nth-child(3n+3) { border-left-color: #ed8936; }
+        .skill-category:nth-child(3n+2) {
+            border-left-color: #48bb78;
+        }
+
+        .skill-category:nth-child(3n+3) {
+            border-left-color: #ed8936;
+        }
 
         .skill-category:hover {
             transform: translateY(-3px);
@@ -371,25 +390,80 @@
         }
 
         @media print {
+
+            /* --- Print Environment Reset --- */
             body {
-                background: white;
-                padding: 0;
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                /* Force a smaller default font size to squeeze content vertically */
+                font-size: 9.5pt !important;
             }
 
             .resume-container {
-                box-shadow: none;
-                border-radius: 0;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                /* Optional: Use a slight scale transform to compress the final content */
+                /* transform: scale(0.98);
+                transform-origin: top left; */
             }
 
+            .header, .content {
+                /* Reduce inner padding to save vertical space */
+                padding: 15px 40px 15px !important;
+            }
+
+            /* Hide dynamic elements */
             .profile-selector {
-                display: none;
+                display: none !important;
             }
 
             .item:hover {
-                transform: none;
-                background: none;
+                transform: none !important;
+                background: none !important;
+                padding: 6px 6px 6px 12px !important;
+            }
+
+            /* --- Page Break Control (Fixes Abnormal Cuts) --- */
+            /* 1. Ensure Sections, Titles, and Subtitles don't get split */
+            .section, .section-title {
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
+            }
+
+            /* 2. Ensure each list item stays on the same page */
+            .item {
+                page-break-inside: avoid !important;
+                page-break-after: avoid !important;
+                margin-bottom: 8px !important; /* Slightly reduce item spacing */
+            }
+
+            /* 3. Force the summary to stay with the first section on the same page */
+            .summary {
+                page-break-after: avoid !important;
+            }
+
+            /* --- Skills Layout Fix (Forces 3 Columns) --- */
+            .skills-section {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 8px !important;
+            }
+
+            /* --- Final Single-Page Aggression --- */
+            /* This rule often forces single-page print by allowing content to flow continuously */
+            .resume-container {
+                height: auto !important;
+                overflow: visible !important;
+            }
+
+            /* Force all text to stay together, preventing cuts in the middle of lists/paragraphs */
+            ul, ol, p, h1, h2, h3, h4, .item-description {
+                orphans: 3 !important;
+                widows: 3 !important;
             }
         }
+
 
         @media (max-width: 768px) {
             body {
@@ -422,6 +496,32 @@
                 padding: 6px 15px;
             }
         }
+
+        @media print {
+            /* ... existing print styles ... */
+            /* NEW RULES FOR SINGLE PAGE FIT AND EXACT SCALE */
+            /* 1. Scale the entire content down to fit on one page if needed */
+            .resume-container {
+                width: 100% !important;
+                height: auto !important;
+                box-shadow: none !important;
+                /* Use transform to scale down content if it exceeds the page height */
+                transform-origin: top left;
+                max-width: 900px;
+            }
+
+            /* 2. Remove all margins/padding that could break the layout */
+            body {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            /* 3. Ensure no page breaks are inserted */
+            .section, .item, .skills-section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
     </style>
 </head>
 <body>
@@ -445,11 +545,11 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://linkedin.com/in/yogeshphalak" target="_blank">YogeshPhalak</a>
+                    <a href="https://www.linkedin.com/in/yogesh31415" target="_blank">linkedin.com/in/yogesh31415</a>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <a href="https://github.com/YogeshPhalak" target="_blank">YogeshPhalak</a>
+                    <a href="https://github.com/YogeshPhalak" target="_blank">github.com/YogeshPhalak</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
@@ -553,12 +653,30 @@
                 {
                     title: "Technical Skills",
                     skills: [
-                        { category: "Research Methods", items: ["Analytical Mechanics", "Variational Calculus", "Nonlinear Dynamics", "Chaos Theory", "Bifurcation Analysis", "Reduced-Order Modeling"] },
-                        { category: "Computational", items: ["Python (NumPy, SciPy)", "MATLAB", "GPU Computing (CUDA)", "High-Performance Computing", "Parallel Computing", "Mathematica"] },
-                        { category: "Machine Learning", items: ["Reservoir Computing", "Neural Networks", "Time-Series Analysis", "Pattern Recognition", "Optimization"] },
-                        { category: "Experimental", items: ["Motion Capture", "Force/Torque Sensing", "High-Speed Imaging", "Sensor Integration", "Data Acquisition"] },
-                        { category: "CAD/Fabrication", items: ["SolidWorks", "Fusion360", "3D Printing", "Laser Cutting", "Rapid Prototyping"] },
-                        { category: "Software", items: ["Git/GitHub", "LaTeX", "Scientific Visualization", "Linux", "Clean Code Practices"] }
+                        {
+                            category: "Research Methods",
+                            items: ["Analytical Mechanics", "Variational Calculus", "Nonlinear Dynamics", "Chaos Theory", "Bifurcation Analysis", "Reduced-Order Modeling"]
+                        },
+                        {
+                            category: "Computational",
+                            items: ["Python (NumPy, SciPy)", "MATLAB", "GPU Computing (CUDA)", "High-Performance Computing", "Parallel Computing", "Mathematica"]
+                        },
+                        {
+                            category: "Machine Learning",
+                            items: ["Reservoir Computing", "Neural Networks", "Time-Series Analysis", "Pattern Recognition", "Optimization"]
+                        },
+                        {
+                            category: "Experimental",
+                            items: ["Motion Capture", "Force/Torque Sensing", "High-Speed Imaging", "Sensor Integration", "Data Acquisition"]
+                        },
+                        {
+                            category: "CAD/Fabrication",
+                            items: ["SolidWorks", "Fusion360", "3D Printing", "Laser Cutting", "Rapid Prototyping"]
+                        },
+                        {
+                            category: "Software",
+                            items: ["Git/GitHub", "LaTeX", "Scientific Visualization", "Linux", "Clean Code Practices"]
+                        }
                     ]
                 },
                 {
@@ -657,13 +775,34 @@
                 {
                     title: "Technical Skills - Physics Computing",
                     skills: [
-                        { category: "Physics Simulation", items: ["Multibody Dynamics", "Continuum Mechanics", "Contact Mechanics", "Nonlinear Dynamics", "Hamiltonian Systems", "Lagrangian Mechanics"] },
-                        { category: "Numerical Methods", items: ["ODE/PDE Solvers", "Symplectic Integrators", "Adaptive Time-Stepping", "Finite Element Methods", "Reduced-Order Modeling", "Spectral Methods"] },
-                        { category: "High-Performance Computing", items: ["GPU Computing (CUDA/PyCuda)", "Parallel Processing", "Vectorization", "Memory Optimization", "Cache Efficiency"] },
-                        { category: "Scientific Computing", items: ["Python (NumPy, SciPy)", "MATLAB", "Mathematica", "C++ (Performance-Critical)", "Fortran (Legacy Code)"] },
-                        { category: "Visualization", items: ["PyOpenGL", "Real-Time Rendering", "Scientific Visualization", "Matplotlib", "Interactive 3D Graphics"] },
-                        { category: "Physics Analysis", items: ["Phase Space Analysis", "Bifurcation Theory", "Chaos Diagnostics", "Lyapunov Exponents", "Poincaré Sections", "Energy Methods"] },
-                        { category: "Software Engineering", items: ["Git/Version Control", "Code Profiling", "Algorithm Optimization", "Unit Testing", "Documentation"] }
+                        {
+                            category: "Physics Simulation",
+                            items: ["Multibody Dynamics", "Continuum Mechanics", "Contact Mechanics", "Nonlinear Dynamics", "Hamiltonian Systems", "Lagrangian Mechanics"]
+                        },
+                        {
+                            category: "Numerical Methods",
+                            items: ["ODE/PDE Solvers", "Symplectic Integrators", "Adaptive Time-Stepping", "Finite Element Methods", "Reduced-Order Modeling", "Spectral Methods"]
+                        },
+                        {
+                            category: "High-Performance Computing",
+                            items: ["GPU Computing (CUDA/PyCuda)", "Parallel Processing", "Vectorization", "Memory Optimization", "Cache Efficiency"]
+                        },
+                        {
+                            category: "Scientific Computing",
+                            items: ["Python (NumPy, SciPy)", "MATLAB", "Mathematica", "C++ (Performance-Critical)", "Fortran (Legacy Code)"]
+                        },
+                        {
+                            category: "Visualization",
+                            items: ["PyOpenGL", "Real-Time Rendering", "Scientific Visualization", "Matplotlib", "Interactive 3D Graphics"]
+                        },
+                        {
+                            category: "Physics Analysis",
+                            items: ["Phase Space Analysis", "Bifurcation Theory", "Chaos Diagnostics", "Lyapunov Exponents", "Poincaré Sections", "Energy Methods"]
+                        },
+                        {
+                            category: "Software Engineering",
+                            items: ["Git/Version Control", "Code Profiling", "Algorithm Optimization", "Unit Testing", "Documentation"]
+                        }
                     ]
                 },
                 {
@@ -789,12 +928,30 @@
                 {
                     title: "Technical Skills - Software Engineering",
                     skills: [
-                        { category: "Languages", items: ["Python (Expert)", "C/C++ (Proficient)", "MATLAB (Expert)", "JavaScript", "Bash/Shell", "SQL"] },
-                        { category: "Frameworks/Libraries", items: ["NumPy/SciPy", "OpenCV", "ROS/ROS2", "PyOpenGL", "PyCuda", "Pandas", "Matplotlib"] },
-                        { category: "Software Engineering", items: ["Git/GitHub", "Agile/Scrum", "Code Review", "Unit Testing", "Documentation", "Design Patterns"] },
-                        { category: "Algorithms & DS", items: ["Graph Algorithms", "Dynamic Programming", "Optimization", "Numerical Methods", "Data Structures"] },
-                        { category: "Systems", items: ["Linux/Unix", "Docker", "Embedded Systems", "Multi-threading", "Memory Management", "Performance Profiling"] },
-                        { category: "Scientific Computing", items: ["GPU Computing", "Parallel Processing", "Numerical Analysis", "Physics Simulation", "High-Performance Computing"] }
+                        {
+                            category: "Languages",
+                            items: ["Python (Expert)", "C/C++ (Proficient)", "MATLAB (Expert)", "JavaScript", "Bash/Shell", "SQL"]
+                        },
+                        {
+                            category: "Frameworks/Libraries",
+                            items: ["NumPy/SciPy", "OpenCV", "ROS/ROS2", "PyOpenGL", "PyCuda", "Pandas", "Matplotlib"]
+                        },
+                        {
+                            category: "Software Engineering",
+                            items: ["Git/GitHub", "Agile/Scrum", "Code Review", "Unit Testing", "Documentation", "Design Patterns"]
+                        },
+                        {
+                            category: "Algorithms & DS",
+                            items: ["Graph Algorithms", "Dynamic Programming", "Optimization", "Numerical Methods", "Data Structures"]
+                        },
+                        {
+                            category: "Systems",
+                            items: ["Linux/Unix", "Docker", "Embedded Systems", "Multi-threading", "Memory Management", "Performance Profiling"]
+                        },
+                        {
+                            category: "Scientific Computing",
+                            items: ["GPU Computing", "Parallel Processing", "Numerical Analysis", "Physics Simulation", "High-Performance Computing"]
+                        }
                     ]
                 },
                 {
@@ -910,14 +1067,38 @@
                 {
                     title: "Technical Skills - Robotics & Hardware",
                     skills: [
-                        { category: "Control Systems", items: ["PID Control", "State-Space Control", "Trajectory Planning", "Motion Planning (A*, RRT)", "Optimal Control", "Model Predictive Control"] },
-                        { category: "Robotics Software", items: ["ROS/ROS2", "SLAM (ORB-SLAM)", "Navigation Stack", "MoveIt", "Gazebo Simulation", "VREP"] },
-                        { category: "Hardware Platforms", items: ["Arduino", "Raspberry Pi", "NVIDIA Jetson", "STM32", "PX4/ArduPilot", "Custom PCB Design"] },
-                        { category: "Sensors", items: ["LIDAR", "IMU", "RGB-D Cameras", "Force/Torque Sensors", "Encoders", "Ultrasonic", "GPS"] },
-                        { category: "CAD & Fabrication", items: ["SolidWorks (Expert)", "Fusion 360", "Catia", "3D Printing", "Laser Cutting", "Rapid Prototyping"] },
-                        { category: "Electronics", items: ["Circuit Design", "PCB Design (Eagle)", "Motor Control", "Power Electronics", "Embedded Systems"] },
-                        { category: "Programming", items: ["C/C++", "Python", "MATLAB", "Embedded C", "Real-time Systems"] },
-                        { category: "UAV Specific", items: ["Flight Controllers", "Autopilot Tuning", "Mission Planning", "Sensor Fusion", "ArduPilot/PX4"] }
+                        {
+                            category: "Control Systems",
+                            items: ["PID Control", "State-Space Control", "Trajectory Planning", "Motion Planning (A*, RRT)", "Optimal Control", "Model Predictive Control"]
+                        },
+                        {
+                            category: "Robotics Software",
+                            items: ["ROS/ROS2", "SLAM (ORB-SLAM)", "Navigation Stack", "MoveIt", "Gazebo Simulation", "VREP"]
+                        },
+                        {
+                            category: "Hardware Platforms",
+                            items: ["Arduino", "Raspberry Pi", "NVIDIA Jetson", "STM32", "PX4/ArduPilot", "Custom PCB Design"]
+                        },
+                        {
+                            category: "Sensors",
+                            items: ["LIDAR", "IMU", "RGB-D Cameras", "Force/Torque Sensors", "Encoders", "Ultrasonic", "GPS"]
+                        },
+                        {
+                            category: "CAD & Fabrication",
+                            items: ["SolidWorks (Expert)", "Fusion 360", "Catia", "3D Printing", "Laser Cutting", "Rapid Prototyping"]
+                        },
+                        {
+                            category: "Electronics",
+                            items: ["Circuit Design", "PCB Design (Eagle)", "Motor Control", "Power Electronics", "Embedded Systems"]
+                        },
+                        {
+                            category: "Programming",
+                            items: ["C/C++", "Python", "MATLAB", "Embedded C", "Real-time Systems"]
+                        },
+                        {
+                            category: "UAV Specific",
+                            items: ["Flight Controllers", "Autopilot Tuning", "Mission Planning", "Sensor Fusion", "ArduPilot/PX4"]
+                        }
                     ]
                 },
                 {
@@ -1034,13 +1215,34 @@
                 {
                     title: "Technical Skills - Research & ML",
                     skills: [
-                        { category: "Machine Learning", items: ["Reservoir Computing", "Neural Networks", "Time-Series Analysis", "Pattern Recognition", "Optimization", "Deep Learning Basics"] },
-                        { category: "Computational", items: ["Python", "MATLAB", "GPU Computing (CUDA)", "High-Performance Computing", "Parallel Computing"] },
-                        { category: "Research Methods", items: ["Nonlinear Dynamics", "Chaos Theory", "Analytical Mechanics", "Numerical Methods", "Bifurcation Analysis", "Experimental Design"] },
-                        { category: "Simulation", items: ["Physics-Based Simulation", "Multibody Dynamics", "Continuum Mechanics", "Reduced-Order Modeling"] },
-                        { category: "Data Science", items: ["Data Analysis", "Statistical Methods", "Visualization (Matplotlib)", "Scientific Computing", "Signal Processing"] },
-                        { category: "Software Engineering", items: ["Git/GitHub", "Clean Code", "Documentation", "Testing", "Code Review", "CI/CD"] },
-                        { category: "Experimental", items: ["Motion Capture", "Force/Torque Sensing", "High-Speed Imaging", "Sensor Integration", "Data Acquisition"] }
+                        {
+                            category: "Machine Learning",
+                            items: ["Reservoir Computing", "Neural Networks", "Time-Series Analysis", "Pattern Recognition", "Optimization", "Deep Learning Basics"]
+                        },
+                        {
+                            category: "Computational",
+                            items: ["Python", "MATLAB", "GPU Computing (CUDA)", "High-Performance Computing", "Parallel Computing"]
+                        },
+                        {
+                            category: "Research Methods",
+                            items: ["Nonlinear Dynamics", "Chaos Theory", "Analytical Mechanics", "Numerical Methods", "Bifurcation Analysis", "Experimental Design"]
+                        },
+                        {
+                            category: "Simulation",
+                            items: ["Physics-Based Simulation", "Multibody Dynamics", "Continuum Mechanics", "Reduced-Order Modeling"]
+                        },
+                        {
+                            category: "Data Science",
+                            items: ["Data Analysis", "Statistical Methods", "Visualization (Matplotlib)", "Scientific Computing", "Signal Processing"]
+                        },
+                        {
+                            category: "Software Engineering",
+                            items: ["Git/GitHub", "Clean Code", "Documentation", "Testing", "Code Review", "CI/CD"]
+                        },
+                        {
+                            category: "Experimental",
+                            items: ["Motion Capture", "Force/Torque Sensing", "High-Speed Imaging", "Sensor Integration", "Data Acquisition"]
+                        }
                     ]
                 },
                 {
@@ -1141,7 +1343,7 @@
 
     // Profile switcher
     document.querySelectorAll('.profile-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             document.querySelectorAll('.profile-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             currentProfile = this.dataset.profile;
