@@ -230,116 +230,81 @@ export const projects = [{
 export const skills = {
     'Research & Modeling': {
         items: [{
-            name: 'Nonlinear Dynamics & Chaos',
-            level: 5
+            name: 'Nonlinear Dynamics & Chaos', level: 5
         }, {
-            name: 'Physical Reservoir Computing',
-            level: 5
+            name: 'Physical Reservoir Computing', level: 5
         }, {
-            name: 'Reduced-Order Modeling',
-            level: 5
+            name: 'Reduced-Order Modeling', level: 5
         }, {
-            name: 'Biomechanics & Animal Locomotion',
-            level: 4
+            name: 'Biomechanics & Animal Locomotion', level: 4
         }, {
-            name: 'Continuum & Solid Mechanics',
-            level: 3
+            name: 'Continuum & Solid Mechanics', level: 3
         }, {
-            name: 'Mathematical Modeling',
-            level: 4
-        },],
-        colors: {
+            name: 'Mathematical Modeling', level: 4
+        },], colors: {
             light: {
                 bg: 'bg-purple-500', gradient: 'from-purple-500 to-indigo-500', shadow: 'shadow-purple-500/50',
-            },
-            dark: {
+            }, dark: {
                 bg: 'bg-purple-500', gradient: 'from-purple-500 to-indigo-500', shadow: 'shadow-purple-400/50',
             }
         }
-    },
-    'Robotics & Control': {
+    }, 'Robotics & Control': {
         items: [{
-            name: 'Control Systems Design',
-            level: 4
+            name: 'Control Systems Design', level: 4
         }, {
-            name: 'Robotics Kinematics & Dynamics',
-            level: 4
+            name: 'Robotics Kinematics & Dynamics', level: 4
         }, {
-            name: 'Localization & Navigation (SLAM)',
-            level: 4
+            name: 'Localization & Navigation (SLAM)', level: 4
         }, {
-            name: 'Robot Operating System (ROS)',
-            level: 3
+            name: 'Robot Operating System (ROS)', level: 3
         }, {
-            name: 'UAV/Drone Systems',
-            level: 4
+            name: 'UAV/Drone Systems', level: 4
         }, {
-            name: 'Multi-Robot Systems',
-            level: 3
-        },],
-        colors: {
+            name: 'Multi-Robot Systems', level: 3
+        },], colors: {
             light: {
                 bg: 'bg-blue-500', gradient: 'from-blue-500 to-cyan-500', shadow: 'shadow-blue-500/50',
-            },
-            dark: {
+            }, dark: {
                 bg: 'bg-blue-500', gradient: 'from-blue-500 to-cyan-500', shadow: 'shadow-cyan-400/50',
             }
         }
-    },
-    'Software & Technical Stack': {
+    }, 'Software & Technical Stack': {
         items: [{
-            name: 'Python',
-            level: 5
+            name: 'Python', level: 5
         }, {
-            name: 'MATLAB & Simulink',
-            level: 5
+            name: 'MATLAB & Simulink', level: 5
         }, {
-            name: 'GPU Computing (PyOpenGL, PyCuda)',
-            level: 3
+            name: 'GPU Computing (PyOpenGL, PyCuda)', level: 3
         }, {
-            name: 'C & C++',
-            level: 3
+            name: 'C & C++', level: 3
         }, {
-            name: 'Version Control (Git)',
-            level: 4
+            name: 'Version Control (Git)', level: 4
         }, {
-            name: 'Containerization (Docker)',
-            level: 2
-        },],
-        colors: {
+            name: 'Containerization (Docker)', level: 2
+        },], colors: {
             light: {
                 bg: 'bg-emerald-500', gradient: 'from-emerald-500 to-green-500', shadow: 'shadow-emerald-500/50',
-            },
-            dark: {
+            }, dark: {
                 bg: 'bg-emerald-500', gradient: 'from-emerald-500 to-green-500', shadow: 'shadow-green-400/50',
             }
         }
-    },
-    'Prototyping & Hardware': {
+    }, 'Prototyping & Hardware': {
         items: [{
-            name: 'CAD Modeling (SolidWorks, Fusion360)',
-            level: 5
+            name: 'CAD Modeling (SolidWorks, Fusion360)', level: 5
         }, {
-            name: 'Embedded Systems (Arduino)',
-            level: 5
+            name: 'Embedded Systems (Arduino)', level: 5
         }, {
-            name: 'Circuit Design & Simulation (MultiSim)',
-            level: 3
+            name: 'Circuit Design & Simulation (MultiSim)', level: 3
         }, {
-            name: 'Rapid Prototyping & Fabrication',
-            level: 3
+            name: 'Rapid Prototyping & Fabrication', level: 3
         }, {
-            name: 'Hardware Testing & Validation',
-            level: 4
+            name: 'Hardware Testing & Validation', level: 4
         }, {
-            name: 'Sensor Integration',
-            level: 3
-        },],
-        colors: {
+            name: 'Sensor Integration', level: 3
+        },], colors: {
             light: {
                 bg: 'bg-rose-500', gradient: 'from-rose-500 to-pink-500', shadow: 'shadow-rose-500/50',
-            },
-            dark: {
+            }, dark: {
                 bg: 'bg-rose-500', gradient: 'from-rose-500 to-pink-500', shadow: 'shadow-pink-400/50',
             }
         }
@@ -348,284 +313,279 @@ export const skills = {
 
 // Data for Insights/Blog section
 
-export const blogs = [
-    {
-        title: 'How I Built My React + Tailwind Portfolio (And How You Can Too!)',
-        excerpt: 'A step-by-step guide on building a modern portfolio from scratch using React, Vite, and Tailwind CSS, and deploying it for free to GitHub Pages.',
-        slug: 'how-i-built-this-portfolio', // <-- This MUST match your filename
-        readTime: '8 min', // This is a more accurate estimate for this post
-        date: 'November 2024',
-        image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80',
-        tags: ['React', 'Vite', 'Tailwind CSS', 'GitHub Pages', 'Tutorial', 'Web Development'], // <-- No Framer Motion
-    },
-];
+export const blogs = [{
+    title: 'The Reduced Bar-Hinge Model for Origami Dynamics',
+    excerpt: 'Fast physics-based simulation of origami structures using Python and parallel computing.',
+    slug: 'reduced-bar-hinge-model',
+    readTime: '12 min',
+    date: 'November 2025',
+    image: 'https://images.unsplash.com/photo-1651243181369-63ba873dabf1?w=1200&q=80',
+    tags: ['Python', 'Physics', 'Simulation', 'Numba', 'Origami', 'Scientific Computing'],
+}, {
+    title: 'How I Built My React + Tailwind Portfolio (And How You Can Too!)',
+    excerpt: 'A step-by-step guide on building a modern portfolio from scratch using React, Vite, and Tailwind CSS, and deploying it for free to GitHub Pages.',
+    slug: 'how-i-built-this-portfolio',
+    readTime: '8 min',
+    date: 'November 2025',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'GitHub Pages', 'Tutorial', 'Web Development'],
+},];
 
 
 // Data for Summary/Stats section
-export const stats = [
-    {
-        label: 'Research Years',
-        value: '6+',
-        icon: GraduationCap,
-        color: 'from-purple-500 to-pink-500',
-        url: '#research',
-    }, {
-        label: 'Publications',
-        value: '14+',
-        icon: BookOpen,
-        color: 'from-blue-500 to-cyan-500',
-        url: 'https://scholar.google.com/citations?user=TU2VNd8AAAAJ&hl=en',
-    }, {
-        label: 'Projects',
-        value: projects.length.toString() + '+',
-        icon: Code,
-        color: 'from-green-500 to-emerald-500',
-        url: '#research',
-    }, {
-        label: 'Collaborations',
-        value: '5+',
-        icon: Users,
-        color: 'from-orange-500 to-red-500',
-        url: '',
-    },];
+export const stats = [{
+    label: 'Research Years', value: '6+', icon: GraduationCap, color: 'from-purple-500 to-pink-500', url: '#research',
+}, {
+    label: 'Publications',
+    value: '14+',
+    icon: BookOpen,
+    color: 'from-blue-500 to-cyan-500',
+    url: 'https://scholar.google.com/citations?user=TU2VNd8AAAAJ&hl=en',
+}, {
+    label: 'Projects',
+    value: projects.length.toString() + '+',
+    icon: Code,
+    color: 'from-green-500 to-emerald-500',
+    url: '#research',
+}, {
+    label: 'Collaborations', value: '5+', icon: Users, color: 'from-orange-500 to-red-500', url: '',
+},];
 
 // Data for Photography Gallery
-export const photos = [
-    {
-        src: '/images/gallery/ffb04931e463.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Sylvan Sparkle",
-        description: "Bare trees shimmer with a coating of ice, backlit by a brilliant sun that reflects off the frozen ground, creating a stark yet beautiful winter scene."
-    }, {
-        src: '/images/gallery/6ee378ed2884.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Academic Stone Beneath the Blue",
-        description: "The stately stone facade of the College of Liberal Arts and Human Sciences building stands prominently under a clear, expansive blue sky."
-    }, {
-        src: '/images/gallery/c9770e2a389c.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Winter's Golden Veil",
-        description: "A stark, bare tree stands prominently on a gentle hill, its intricate branches silhouetted against a cloudy sky infused with a soft, ethereal golden light."
-    }, {
-        src: '/images/gallery/569279672476.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Skyward Tapestry",
-        description: "A magnificent, leafless tree stands as a bold silhouette against a vivid blue sky adorned with delicate, wispy clouds above a tranquil green expanse."
-    }, {
-        src: '/images/gallery/62f0c58b0217.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Dusk on the Seasonal Path",
-        description: "Golden light from the setting sun illuminates a quiet street, where bare winter trees stand beside the vibrant pink of newly bloomed blossoms under a dramatic, cloudy sky."
-    }, {
-        src: '/images/gallery/5f0588387f7d.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Majestic Ascent",
-        description: "Warm sunlight highlights the intricate stonework of a soaring Gothic tower, reaching towards a vast and clear azure sky."
-    }, {
-        src: '/images/gallery/1cbf621b4072.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Collegiate Gothic Morning",
-        description: "Sunlight bathes the majestic stone buildings and expansive green quad of a university campus, with tables set out for an event under a clear blue sky."
-    }, {
-        src: '/images/gallery/15c9cd95fa4e.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Gothic Pathways, Budding Greens",
-        description: "A sun-dappled stone path leads through a historic university campus, framed by old-world architecture and trees just awakening to spring."
-    }, {
-        src: '/images/gallery/5a1edced7626.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Rhythm of Light and Wood",
-        description: "Bright sunlight casts a striking pattern of long shadows across a weathered wooden pier, leading the eye past waterfront buildings to a distant bridge over tranquil waters."
-    }, {
-        src: '/images/gallery/72643750754c.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Azure Horizon, Sandy Embrace",
-        description: "Gentle waves kiss the wide sandy shore under a vast, cloudless blue sky, with a few figures enjoying the distant beach."
-    }, {
-        src: '/images/gallery/5801d7a918fa.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Urban Ascent",
-        description: "Dynamic architecture soars towards a brilliant blue sky, showcasing a captivating blend of modern skyscrapers and ornate classical structures from a ground-level perspective."
-    }, {
-        src: '/images/gallery/c5bfe608aa1b.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Atlanta's Golden Glow",
-        description: "An elevated view captures Atlanta's downtown, where modern skyscrapers and historic buildings are bathed in the warm, cloud-dappled light of late afternoon."
-    }, {
-        src: '/images/gallery/1187e4a8fe7a.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Skyline's Gentle Glow",
-        description: "Warm lights from towering skyscrapers illuminate a tranquil urban street under the deep blue of the night sky."
-    }, {
-        src: '/images/gallery/bebb0424d8c6.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Urban Veins to the Skyline",
-        description: "Curving light rail tracks stretch into the distance, leading towards a vibrant city skyline punctuated by modern architecture and overhead power lines."
-    }, {
-        src: '/images/gallery/9a38dede3f6b.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Sky-Lit Grandeur",
-        description: "The elegant, multi-story atrium of a historic building is bathed in natural light from its vast glass ceiling, featuring ornate balconies and an array of hanging white banners."
-    }, {
-        src: '/images/gallery/3eb2e392a7c7.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Evening's Embrace",
-        description: "The sky glows with warm golden and soft blue hues as dramatic clouds blanket a verdant park landscape at dusk."
-    }, {
-        src: '/images/gallery/20f13aae8fd2.jpg',
-        width: 1920,
-        height: 1440,
-        title: "River Valley Serenity",
-        description: "Lush green mountains frame a tranquil river, reflecting the bright blue sky with scattered clouds on a clear day."
-    }, {
-        src: '/images/gallery/afcc1ae12166.jpg',
-        width: 1920,
-        height: 2560,
-        title: "City's Fiery Farewell",
-        description: "A dramatic orange and pink sunset illuminates a darkening urban streetscape, where glowing streetlights and car headlights mark the end of the day."
-    }, {
-        src: '/images/gallery/7e3d9cea812d.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Stone Sentinel",
-        description: "An imposing, castle-like stone building with multiple towers stands majestically under a bright blue sky, with geometric pathways in the foreground."
-    }, {
-        src: '/images/gallery/97c102519fff.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Turreted Victorian Charm",
-        description: "An elegant Queen Anne style house, painted in muted green and deep red, proudly displays its prominent circular turret and wrap-around porch under a soft, overcast sky."
-    }, {
-        src: '/images/gallery/d3ac695a19ad.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Whispers on the Water",
-        description: "A tranquil lake perfectly mirrors the radiant setting sun and wispy clouds above, viewed from behind a rustic wooden railing."
-    }, {
-        src: '/images/gallery/b872853a7603.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Shadow Play by Gaslight",
-        description: "A warm gas lantern illuminates a textured white brick wall, casting intricate shadows of foliage against the night."
-    }, {
-        src: '/images/gallery/0ca97e152f0a.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Horizon Ablaze",
-        description: "The setting sun ignites the sky in fiery orange and red, casting dramatic silhouettes over rolling mountains and a peaceful valley."
-    }, {
-        src: '/images/gallery/cbdc81b03f15.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Nature's Grand Portal",
-        description: "A magnificent natural rock arch frames a clear blue sky dotted with clouds, revealing the grand scale of this ancient geological wonder."
-    }, {
-        src: '/images/gallery/ee5759c6bba1.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Evening's Fiery Canvas",
-        description: "Vibrant orange and pink clouds ignite the sky at dusk, silhouetting a grand stone building and trees below."
-    }, {
-        src: '/images/gallery/6eed717ae51b.jpg',
-        width: 1920,
-        height: 2560,
-        title: "A Woodland Kaleidoscope",
-        description: "A winding forest path covered in fallen leaves leads into a vibrant autumn canopy of green, gold, and crimson."
-    }, {
-        src: '/images/gallery/727619e7b552.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Autumn's Lace",
-        description: "Intricate tree branches, some still adorned with golden autumn leaves and others starkly bare, create a delicate silhouette against a soft, bright sky."
-    }, {
-        src: '/images/gallery/fbc1089af153.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Silver Stallion Under a Mackerel Sky",
-        description: "A sleek silver Ford Mustang convertible rests on a grassy slope, set against a dramatic cloudy sky and a stark, leafless tree."
-    }, {
-        src: '/images/gallery/ebcddcdb481a.jpg',
-        width: 1920,
-        height: 1440,
-        title: "Autumn's Golden Embrace",
-        description: "The setting sun casts a vibrant golden glow over rolling hills blanketed in brilliant autumn foliage, creating a breathtaking landscape."
-    }, {
-        src: '/images/gallery/bd465abfaa88.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Sentinel of the Setting Sun",
-        description: "A weathered, leafless tree stands prominently on a hillside, overlooking rolling autumn forests under a dramatic, cloud-filled sky touched by the warm glow of the setting sun."
-    },];
+export const photos = [{
+    src: '/images/gallery/ffb04931e463.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Sylvan Sparkle",
+    description: "Bare trees shimmer with a coating of ice, backlit by a brilliant sun that reflects off the frozen ground, creating a stark yet beautiful winter scene."
+}, {
+    src: '/images/gallery/6ee378ed2884.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Academic Stone Beneath the Blue",
+    description: "The stately stone facade of the College of Liberal Arts and Human Sciences building stands prominently under a clear, expansive blue sky."
+}, {
+    src: '/images/gallery/c9770e2a389c.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Winter's Golden Veil",
+    description: "A stark, bare tree stands prominently on a gentle hill, its intricate branches silhouetted against a cloudy sky infused with a soft, ethereal golden light."
+}, {
+    src: '/images/gallery/569279672476.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Skyward Tapestry",
+    description: "A magnificent, leafless tree stands as a bold silhouette against a vivid blue sky adorned with delicate, wispy clouds above a tranquil green expanse."
+}, {
+    src: '/images/gallery/62f0c58b0217.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Dusk on the Seasonal Path",
+    description: "Golden light from the setting sun illuminates a quiet street, where bare winter trees stand beside the vibrant pink of newly bloomed blossoms under a dramatic, cloudy sky."
+}, {
+    src: '/images/gallery/5f0588387f7d.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Majestic Ascent",
+    description: "Warm sunlight highlights the intricate stonework of a soaring Gothic tower, reaching towards a vast and clear azure sky."
+}, {
+    src: '/images/gallery/1cbf621b4072.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Collegiate Gothic Morning",
+    description: "Sunlight bathes the majestic stone buildings and expansive green quad of a university campus, with tables set out for an event under a clear blue sky."
+}, {
+    src: '/images/gallery/15c9cd95fa4e.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Gothic Pathways, Budding Greens",
+    description: "A sun-dappled stone path leads through a historic university campus, framed by old-world architecture and trees just awakening to spring."
+}, {
+    src: '/images/gallery/5a1edced7626.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Rhythm of Light and Wood",
+    description: "Bright sunlight casts a striking pattern of long shadows across a weathered wooden pier, leading the eye past waterfront buildings to a distant bridge over tranquil waters."
+}, {
+    src: '/images/gallery/72643750754c.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Azure Horizon, Sandy Embrace",
+    description: "Gentle waves kiss the wide sandy shore under a vast, cloudless blue sky, with a few figures enjoying the distant beach."
+}, {
+    src: '/images/gallery/5801d7a918fa.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Urban Ascent",
+    description: "Dynamic architecture soars towards a brilliant blue sky, showcasing a captivating blend of modern skyscrapers and ornate classical structures from a ground-level perspective."
+}, {
+    src: '/images/gallery/c5bfe608aa1b.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Atlanta's Golden Glow",
+    description: "An elevated view captures Atlanta's downtown, where modern skyscrapers and historic buildings are bathed in the warm, cloud-dappled light of late afternoon."
+}, {
+    src: '/images/gallery/1187e4a8fe7a.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Skyline's Gentle Glow",
+    description: "Warm lights from towering skyscrapers illuminate a tranquil urban street under the deep blue of the night sky."
+}, {
+    src: '/images/gallery/bebb0424d8c6.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Urban Veins to the Skyline",
+    description: "Curving light rail tracks stretch into the distance, leading towards a vibrant city skyline punctuated by modern architecture and overhead power lines."
+}, {
+    src: '/images/gallery/9a38dede3f6b.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Sky-Lit Grandeur",
+    description: "The elegant, multi-story atrium of a historic building is bathed in natural light from its vast glass ceiling, featuring ornate balconies and an array of hanging white banners."
+}, {
+    src: '/images/gallery/3eb2e392a7c7.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Evening's Embrace",
+    description: "The sky glows with warm golden and soft blue hues as dramatic clouds blanket a verdant park landscape at dusk."
+}, {
+    src: '/images/gallery/20f13aae8fd2.jpg',
+    width: 1920,
+    height: 1440,
+    title: "River Valley Serenity",
+    description: "Lush green mountains frame a tranquil river, reflecting the bright blue sky with scattered clouds on a clear day."
+}, {
+    src: '/images/gallery/afcc1ae12166.jpg',
+    width: 1920,
+    height: 2560,
+    title: "City's Fiery Farewell",
+    description: "A dramatic orange and pink sunset illuminates a darkening urban streetscape, where glowing streetlights and car headlights mark the end of the day."
+}, {
+    src: '/images/gallery/7e3d9cea812d.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Stone Sentinel",
+    description: "An imposing, castle-like stone building with multiple towers stands majestically under a bright blue sky, with geometric pathways in the foreground."
+}, {
+    src: '/images/gallery/97c102519fff.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Turreted Victorian Charm",
+    description: "An elegant Queen Anne style house, painted in muted green and deep red, proudly displays its prominent circular turret and wrap-around porch under a soft, overcast sky."
+}, {
+    src: '/images/gallery/d3ac695a19ad.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Whispers on the Water",
+    description: "A tranquil lake perfectly mirrors the radiant setting sun and wispy clouds above, viewed from behind a rustic wooden railing."
+}, {
+    src: '/images/gallery/b872853a7603.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Shadow Play by Gaslight",
+    description: "A warm gas lantern illuminates a textured white brick wall, casting intricate shadows of foliage against the night."
+}, {
+    src: '/images/gallery/0ca97e152f0a.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Horizon Ablaze",
+    description: "The setting sun ignites the sky in fiery orange and red, casting dramatic silhouettes over rolling mountains and a peaceful valley."
+}, {
+    src: '/images/gallery/cbdc81b03f15.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Nature's Grand Portal",
+    description: "A magnificent natural rock arch frames a clear blue sky dotted with clouds, revealing the grand scale of this ancient geological wonder."
+}, {
+    src: '/images/gallery/ee5759c6bba1.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Evening's Fiery Canvas",
+    description: "Vibrant orange and pink clouds ignite the sky at dusk, silhouetting a grand stone building and trees below."
+}, {
+    src: '/images/gallery/6eed717ae51b.jpg',
+    width: 1920,
+    height: 2560,
+    title: "A Woodland Kaleidoscope",
+    description: "A winding forest path covered in fallen leaves leads into a vibrant autumn canopy of green, gold, and crimson."
+}, {
+    src: '/images/gallery/727619e7b552.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Autumn's Lace",
+    description: "Intricate tree branches, some still adorned with golden autumn leaves and others starkly bare, create a delicate silhouette against a soft, bright sky."
+}, {
+    src: '/images/gallery/fbc1089af153.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Silver Stallion Under a Mackerel Sky",
+    description: "A sleek silver Ford Mustang convertible rests on a grassy slope, set against a dramatic cloudy sky and a stark, leafless tree."
+}, {
+    src: '/images/gallery/ebcddcdb481a.jpg',
+    width: 1920,
+    height: 1440,
+    title: "Autumn's Golden Embrace",
+    description: "The setting sun casts a vibrant golden glow over rolling hills blanketed in brilliant autumn foliage, creating a breathtaking landscape."
+}, {
+    src: '/images/gallery/bd465abfaa88.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Sentinel of the Setting Sun",
+    description: "A weathered, leafless tree stands prominently on a hillside, overlooking rolling autumn forests under a dramatic, cloud-filled sky touched by the warm glow of the setting sun."
+},];
 
 // Data for the Charcoal Sketching gallery.
 // Replace these with your own images and dimensions.
 
-export const sketches = [
-    {
-        src: '/images/sketchbook/7c1cfa963e7f.jpg',
-        width: 1920,
-        height: 2175,
-        title: "Lines of Thought",
-        description: "A contemplative graphite portrait of a woman, with drawing tools beside it, captures a quiet moment of artistic creation."
-    }, {
-        src: '/images/sketchbook/6023e949e994.jpg',
-        width: 1920,
-        height: 1433,
-        title: "Pencil & Progress",
-        description: "Two engaging pencil portraits, along with art supplies and technical documents, reveal a workspace where creativity and academic pursuits beautifully intertwine."
-    }, {
-        src: '/images/sketchbook/5989506df604.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Silent Gaze in Charcoal",
-        description: "A striking monochromatic portrait of a woman with a bindi, her intense gaze rendered through bold charcoal strokes on textured paper."
-    }, {
-        src: '/images/sketchbook/46519bc35a62.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Graphite Grin",
-        description: "A joyful, closed-eyed smile radiates from this expressive monochrome sketch, created with the pencil visible alongside the artwork."
-    }, {
-        src: '/images/sketchbook/0b2ad3e673be.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Silent Reflection",
-        description: "A charcoal portrait captures a woman with closed eyes and traditional adornments, embodying a serene moment of deep introspection."
-    }, {
-        src: '/images/sketchbook/4790e1b3f53d.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Melody in Graphite",
-        description: "An expressive pencil portrait captures a woman with a bindi and flowing dark hair, holding a flute to her lips with a captivating gaze."
-    }, {
-        src: '/images/sketchbook/4ba79f324441.jpg',
-        width: 1920,
-        height: 2560,
-        title: "Scars and Stare",
-        description: "This intense graphite portrait features a rugged man with an unflinching gaze and prominent facial scars, rendered with expressive, textured pencil strokes."
-    }, {
-        src: '/images/sketchbook/e38a3c7da69c.jpg',
-        width: 1920,
-        height: 1406,
-        title: "Phantom of the High Seas",
-        description: "A dramatic monochrome sketch captures a large, stylized sailing ship, its weathered sails and hull suggesting a long journey's end or a ghostly presence on the shore."
-    },];
+export const sketches = [{
+    src: '/images/sketchbook/7c1cfa963e7f.jpg',
+    width: 1920,
+    height: 2175,
+    title: "Lines of Thought",
+    description: "A contemplative graphite portrait of a woman, with drawing tools beside it, captures a quiet moment of artistic creation."
+}, {
+    src: '/images/sketchbook/6023e949e994.jpg',
+    width: 1920,
+    height: 1433,
+    title: "Pencil & Progress",
+    description: "Two engaging pencil portraits, along with art supplies and technical documents, reveal a workspace where creativity and academic pursuits beautifully intertwine."
+}, {
+    src: '/images/sketchbook/5989506df604.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Silent Gaze in Charcoal",
+    description: "A striking monochromatic portrait of a woman with a bindi, her intense gaze rendered through bold charcoal strokes on textured paper."
+}, {
+    src: '/images/sketchbook/46519bc35a62.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Graphite Grin",
+    description: "A joyful, closed-eyed smile radiates from this expressive monochrome sketch, created with the pencil visible alongside the artwork."
+}, {
+    src: '/images/sketchbook/0b2ad3e673be.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Silent Reflection",
+    description: "A charcoal portrait captures a woman with closed eyes and traditional adornments, embodying a serene moment of deep introspection."
+}, {
+    src: '/images/sketchbook/4790e1b3f53d.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Melody in Graphite",
+    description: "An expressive pencil portrait captures a woman with a bindi and flowing dark hair, holding a flute to her lips with a captivating gaze."
+}, {
+    src: '/images/sketchbook/4ba79f324441.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Scars and Stare",
+    description: "This intense graphite portrait features a rugged man with an unflinching gaze and prominent facial scars, rendered with expressive, textured pencil strokes."
+}, {
+    src: '/images/sketchbook/e38a3c7da69c.jpg',
+    width: 1920,
+    height: 1406,
+    title: "Phantom of the High Seas",
+    description: "A dramatic monochrome sketch captures a large, stylized sailing ship, its weathered sails and hull suggesting a long journey's end or a ghostly presence on the shore."
+},];
 
 
 // Data for Creative/Beyond section
@@ -639,8 +599,7 @@ export const creative = [{
     count: sketches.length,
     image: 'https://images.unsplash.com/photo-1505569127510-bde1536937bc?w=600',
     description: 'Expressive portraits and figure studies',
-},
-//     {
+}, //     {
 //     type: 'Travel',
 //     count: 12,
 //     image: 'https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=600',

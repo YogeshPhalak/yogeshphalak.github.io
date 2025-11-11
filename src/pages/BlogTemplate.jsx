@@ -97,7 +97,6 @@ const BlogTemplate = () => {
     }, [contentHtml]);
 
     if (contentHtml === null) {
-        // ... (loading spinner is fine, no changes) ...
         return (
             <motion.div
                 className="pt-40 pb-40 px-4 min-h-screen max-w-7xl mx-auto text-center text-xl text-slate-500 dark:text-gray-400">
@@ -119,7 +118,6 @@ const BlogTemplate = () => {
     };
 
     const handleShare = async () => {
-        // ... (this is fine, no changes) ...
         try {
             if (navigator.share) {
                 await navigator.share({
@@ -206,7 +204,7 @@ const BlogTemplate = () => {
                             </motion.div>
                         )}
 
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                        <h1 className="text-4xl pb-2 sm:text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                             {blog.title}
                         </h1>
                         <p className="text-xl sm:text-2xl text-slate-600 dark:text-gray-400 mb-6">
