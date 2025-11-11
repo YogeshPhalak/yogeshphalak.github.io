@@ -52,7 +52,7 @@ const Hero = ({scrollToSection}) => {
                         whileHover={{scale: 1.05}}
                         transition={{duration: 0.8, delay: 1}}
                         className="relative z-20 text-5xl md:text-8xl font-extrabold tracking-tight bg-gradient-to-r
-                    from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent select-none, mb-6"
+                    from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent select-none pb-2 mb-6"
                     >
                         <span className="whitespace-nowrap sm:break-normal">Yogesh</span>{' '}
                         <span className="whitespace-nowrap sm:break-normal">Phalak</span>
@@ -64,12 +64,11 @@ const Hero = ({scrollToSection}) => {
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.8, delay: 1}}
-                    className="text-2xl z-20 md:text-4xl font-light text-slate-800 dark:text-gray-100 mb-6"
+                    className="relative text-2xl z-20 md:text-4xl font-light text-slate-800 dark:text-gray-100 mb-6"
                 >
                     Exploring{' '}
-                    <span className="bg-clip-text text-transparent z-20 bg-gradient-to-r
-                     from-cyan-400 via-blue-500 to-violet-500
-                     font-semibold animate-gradient-x drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500
+                    to-violet-500 font-semibold animate-gradient-x drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]">
                         Mechano-Intelligence
                     </span>
                 </motion.p>
@@ -78,7 +77,7 @@ const Hero = ({scrollToSection}) => {
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.8, delay: 1.2}}
-                    className="text-lg z-20 md:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+                    className="relative text-lg z-20 md:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
                 >
                     PhD Candidate • Physical Reservoir Computing • Robotics • Nonlinear Dynamics •
                     Physics Modeling & Simulations

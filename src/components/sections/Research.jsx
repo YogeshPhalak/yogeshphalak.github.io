@@ -53,7 +53,7 @@ const Research = ({sectionVariants}) => {
         viewport={{once: true, amount: 0.2}}
     >
         <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold mb-4 pb-1 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Research & Projects
             </h2>
             <p className="text-center text-slate-600 dark:text-gray-400 mb-12">

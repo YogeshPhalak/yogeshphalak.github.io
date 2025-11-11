@@ -3,8 +3,6 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import {stats} from '../../data/portfolioData.js';
 import StatCard from '../ui/StatCard';
-import SectionTitle from '../ui/Typography/SectionTitle';
-import SectionSubtitle from '../ui/Typography/SectionSubtitle';
 
 const containerVariants = {
     hidden: {}, visible: {
@@ -51,19 +49,18 @@ const About = ({sectionVariants}) => {
                         <p className="text-xl">
                             I specialize in <span
                             className="text-cyan-500 dark:text-cyan-400 font-semibold">mechano-intelligence</span> —
-                            exploring how
-                            physical systems can process information through their intrinsic dynamics. My work
-                            bridges mechanics and computation by developing
-                            <strong> high-speed, physics-based simulation models </strong> that uncover the
+                            exploring how physical systems can process information through their intrinsic dynamics. My
+                            work bridges mechanics and computation by developing <strong> high-speed, physics-based
+                            simulation models </strong> that uncover the
                             computational potential of real-world structures and materials.
                         </p>
-                        <p>
+                        <p className="text-xl">
                             <strong className="text-purple-500 dark:text-purple-400">Core Expertise:</strong>{' '}
                             Nonlinear Dynamics & Simulation, Reduced-Order Modeling, High-Performance Physics
                             Simulations using CUDA,
                             and Rapid Prototyping & Experimental Validation.
                         </p>
-                        <p>
+                        <p className="text-xl">
                             <strong className="text-pink-500 dark:text-pink-400">Current Focus:</strong>{' '}
                             Building accelerated multi-physics simulations of complex systems — such as
                             <em> origami-inspired structures </em> — to quantify their computational capacity within
@@ -133,16 +130,15 @@ const About = ({sectionVariants}) => {
                         whileInView={{opacity: 1}}
                         viewport={{once: true}}
                         transition={{duration: 0.8, delay: 0.2}}
-                        className="space-y-6 text-slate-700 dark:text-gray-300 leading-relaxed text-lg"
+                        className="space-y-6 text-slate-700 dark:text-gray-300 leading-relaxed text-xl"
                     >
                         <p>
                             I am a <strong>PhD student in Engineering Mechanics at Virginia Tech</strong>, working
                             at the intersection of mechanics, computation, and intelligent systems. My research
                             explores how physical systems—through their geometry, material properties, and
                             dynamics—can process information, forming the foundation of what I call{' '}
-                            <span className="text-cyan-500 dark:text-cyan-400 font-semibold">
-                  mechano-intelligence
-                </span>
+                            <span className="text-cyan-500 dark:text-cyan-400 font-semibold"> mechano-intelligence
+                            </span>
                             .
                         </p>
 

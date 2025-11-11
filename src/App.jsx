@@ -14,7 +14,7 @@ import Footer from './components/ui/Footer';
 import ResumeModal from './components/ui/ResumeModal';
 import BackToTop from './components/ui/BackToTop';
 
-const NAV_HEIGHT_OFFSET = 10;
+const NAV_HEIGHT_OFFSET = 33;
 
 const App = () => {
         const [isMenuOpen, setIsMenuOpen] = useState(false);

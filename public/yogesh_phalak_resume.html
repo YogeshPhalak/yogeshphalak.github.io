@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh Phalak - Professional Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-selector {
+            background: white;
+            padding: 15px 40px;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profile-btn {
+            padding: 8px 20px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.85em;
+            color: #4a5568;
+        }
+
+        .profile-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 3px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 1em;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 12px;
+            min-height: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.85em;
+            opacity: 0.95;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-item i {
+            width: 16px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            padding: 25px 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 4px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #764ba2;
+            transition: width 0.3s ease;
+        }
+
+        .section:hover .section-title::after {
+            width: 100%;
+        }
+
+        .summary {
+            color: #4a5568;
+            font-size: 0.9em;
+            line-height: 1.6;
+            padding: 8px 0;
+        }
+
+        .item {
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 3px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            background: #f7fafc;
+            padding: 6px 6px 6px 12px;
+            border-radius: 4px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+            gap: 10px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            color: #2d3748;
+            font-size: 0.95em;
+        }
+
+        .item-date {
+            color: #718096;
+            font-size: 0.8em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .item-subtitle {
+            color: #4a5568;
+            font-size: 0.85em;
+            font-style: italic;
+            margin-bottom: 2px;
+        }
+
+        .item-description {
+            color: #4a5568;
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+
+        .item-description ul {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+
+        .item-description li {
+            margin-bottom: 2px;
+        }
+
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .skill-category {
+            background: #f7fafc;
+            padding: 10px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:nth-child(3n+2) { border-left-color: #48bb78; }
+        .skill-category:nth-child(3n+3) { border-left-color: #ed8936; }
+
+        .skill-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .skill-category-title {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .skill-tag {
+            background: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75em;
+            color: #4a5568;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: scale(1.05);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 10px 12px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            font-size: 0.85em;
+            color: #4a5568;
+            margin-top: 8px;
+        }
+
+        .highlight-box strong {
+            color: #667eea;
+        }
+
+        .metrics {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .metric {
+            background: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            font-size: 0.8em;
+        }
+
+        .metric-value {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .metric-label {
+            color: #718096;
+            font-size: 0.9em;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .fade-in {
+            animation: fadeInContent 0.4s ease-out forwards;
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .profile-selector {
+                display: none;
+            }
+
+            .item:hover {
+                transform: none;
+                background: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header, .content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .skills-section {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .profile-selector {
+                padding: 10px 20px;
+            }
+
+            .profile-btn {
+                font-size: 0.8em;
+                padding: 6px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="resume-container">
+    <div class="profile-selector">
+        <button class="profile-btn active" data-profile="academic">Academic Research</button>
+        <button class="profile-btn" data-profile="physics-computing">Physics Computing</button>
+        <button class="profile-btn" data-profile="software">Software Engineering</button>
+        <button class="profile-btn" data-profile="robotics">Robotics Engineering</button>
+        <button class="profile-btn" data-profile="research-industry">Research Industry</button>
+    </div>
+
+    <div class="header">
+        <div class="header-content">
+            <h1>Yogesh G. Phalak</h1>
+            <div class="title" id="dynamic-title">Ph.D. Student in Engineering Mechanics · Virginia Tech</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:yphalak@vt.edu">yphalak@vt.edu</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/yogeshphalak" target="_blank">YogeshPhalak</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/YogeshPhalak" target="_blank">YogeshPhalak</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://yogeshphalak.github.io" target="_blank">yogeshphalak.github.io</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="resume-content"></div>
+</div>
+
+<script>
+    const profiles = {
+        academic: {
+            title: "Ph.D. Student in Engineering Mechanics · Virginia Tech",
+            summary: "Ph.D. candidate in Engineering Mechanics at Virginia Tech (Pratt Fellowship recipient) with expertise in nonlinear dynamics, bio-inspired robotics, and deployable structures. Published in top-tier venues including Philosophical Transactions A and Science Advances (under review). Research spans mechano-intelligence, physical reservoir computing, and analytical mechanics with applications to adaptive robotic systems. Proven track record of developing novel computational frameworks and experimental validation of theoretical models.",
+            sections: [
+                {
+                    title: "Education",
+                    items: [
+                        {
+                            title: "Ph.D. in Engineering Mechanics",
+                            subtitle: "Virginia Tech, Blacksburg, VA",
+                            date: "Aug 2022 - Present",
+                            description: "• Recipient of Pratt Fellowship from Dept. of Biomedical Engineering and Mechanics<br>• Current GPA: 3.59/4.00<br>• Research Focus: Mechano-Intelligence, Physical Reservoir Computing, Bio-Inspired Robotics<br>• Advisor: Prof. Shuchin Li"
+                        },
+                        {
+                            title: "Master of Science (M.S.) in Engineering Mechanics",
+                            subtitle: "Virginia Tech, Blacksburg, VA",
+                            date: "Aug 2022 - May 2025",
+                            description: "• Thesis: <em>Optimizing Snake Locomotion on a Plane: A Variational and Analytical Framework for Friction and Normal Force Modulation</em><br>• Published in Philosophical Transactions A (Accepted)"
+                        },
+                        {
+                            title: "B.Tech. in Electrical and Electronics Engineering",
+                            subtitle: "Visvesvaraya National Institute of Technology (VNIT), Nagpur, India",
+                            date: "July 2016 - June 2020",
+                            description: "• CGPA: 7.59/10<br>• Thesis: Design and Development of Autonomous Delivery Robot"
+                        }
+                    ]
+                },
+                {
+                    title: "Research Experience",
+                    items: [
+                        {
+                            title: "Graduate Research Assistant - DARE Lab",
+                            subtitle: "Dept. of Mechanical Engineering, Virginia Tech",
+                            date: "Aug 2022 - Present",
+                            description: "• Focusing on <strong>Mechano-Intelligence</strong> and <strong>Physical Reservoir Computing</strong>, leveraging nonlinear mechanical dynamics to achieve computation and memory through physical systems<br>• Developed reduced-order dynamic modeling methods to simulate and analyze nonlinear behaviors in deployable structures such as origami and kirigami<br>• Implemented parallel processing techniques to enable large-scale and high-speed simulations of complex structural dynamics<br>• Contributed to the development of the <strong>Hyper-Yoshimura framework</strong>, introducing metastability and massive reconfigurability in origami-based structures<br>• Collaborating within a multidisciplinary team to integrate geometry, mechanics, and computation toward the design of intelligent and adaptive robotic structures"
+                        },
+                        {
+                            title: "Summer Research Intern",
+                            subtitle: "Dept. of Biomedical Engineering & Mechanics, Virginia Tech",
+                            date: "May 2019 - July 2019",
+                            description: "• Orchestrated the design of a dedicated combined Arduino-MATLAB-based controller for a Snake Robot<br>• Implemented a semi-supervised experimental setup to conduct iterative Kinematic Optimization on hardware<br>• Optimized Snake Robot movements for maximum displacement under both isotropic and anisotropic frictional conditions"
+                        },
+                        {
+                            title: "Remote Research Intern",
+                            subtitle: "Dept. of Biomedical Engineering, National University of Singapore",
+                            date: "May 2018 - Sept 2018",
+                            description: "• Conducted mathematical modeling of Cable-Driven Manipulators<br>• Executed simulation of Cable-Driven Manipulators and other robotic modules using MATLAB Simulink<br>• Analyzed the performance of manipulators under various practical conditions using MATLAB tools"
+                        }
+                    ]
+                },
+                {
+                    title: "Selected Publications (14+ Total)",
+                    items: [
+                        {
+                            title: "Hyper Yoshimura: How a Slight Tweak on a Classical Folding Pattern Unleashes Meta-Stability for Deployable Robots",
+                            subtitle: "Submitted to Science Advances (Under Review)",
+                            description: "• Zhou, Z., <strong>Phalak, Y.</strong>, Deshpande, V., Walker, I., Li, S.<br>• Preprint: arXiv (Available)<br>• Novel folding pattern with controllable deployment trajectories and programmable meta-stability"
+                        },
+                        {
+                            title: "Optimal Snake Locomotion on Flat Surfaces: An Analytical Framework",
+                            subtitle: "Philosophical Transactions A (Accepted)",
+                            description: "• <strong>Yogesh Phalak</strong>, Hodjat Pendar<br>• Preprint: arXiv:2412.03725<br>• Established variational framework solving long-standing optimization problem in snake robotics"
+                        },
+                        {
+                            title: "Golden Ratio Yoshimura for Meta-Stable and Massively Reconfigurable Deployment",
+                            subtitle: "Philosophical Transactions A, 382(2283), 20240009 (2024)",
+                            description: "• Deshpande, V., <strong>Phalak, Y.</strong>, Zhou, Z., Walker, I., Li, S.<br>• Published by The Royal Society<br>• Explored golden ratio principles in origami design for deployable structures"
+                        },
+                        {
+                            title: "Physical Reservoir Computing With Compliant Fiber Networks",
+                            subtitle: "SMASIS 2025, Paper Number: SMASIS2025-167868",
+                            description: "• Khairnar, A., <strong>Phalak, Y.</strong>, Wang, J., Zhou, Z., Rümmelein, J., Jantzen, B., Li, S., Naughton, N.<br>• Demonstrated pattern recognition and time-series prediction using mechanical systems"
+                        }
+                    ]
+                },
+                {
+                    title: "Teaching Experience",
+                    items: [
+                        {
+                            title: "Teaching Assistant - Statics and Dynamics",
+                            subtitle: "Dept. of Biomedical Engineering and Mechanics, Virginia Tech",
+                            date: "Aug 2022 - Present",
+                            description: "• Assisting in the instruction of undergraduate students in the principles of Statics and Dynamics<br>• Conducting tutorials, grading assignments, and providing constructive feedback to enhance student understanding<br>• Collaborating with faculty to develop course materials and ensure an effective learning environment"
+                        }
+                    ]
+                },
+                {
+                    title: "Technical Skills",
+                    skills: [
+                        { category: "Research Methods", items: ["Analytical Mechanics", "Variational Calculus", "Nonlinear Dynamics", "Chaos Theory", "Bifurcation Analysis", "Reduced-Order Modeling"] },
+                        { category: "Computational", items: ["Python (NumPy, SciPy)", "MATLAB", "GPU Computing (CUDA)", "High-Performance Computing", "Parallel Computing", "Mathematica"] },
+                        { category: "Machine Learning", items: ["Reservoir Computing", "Neural Networks", "Time-Series Analysis", "Pattern Recognition", "Optimization"] },
+                        { category: "Experimental", items: ["Motion Capture", "Force/Torque Sensing", "High-Speed Imaging", "Sensor Integration", "Data Acquisition"] },
+                        { category: "CAD/Fabrication", items: ["SolidWorks", "Fusion360", "3D Printing", "Laser Cutting", "Rapid Prototyping"] },
+                        { category: "Software", items: ["Git/GitHub", "LaTeX", "Scientific Visualization", "Linux", "Clean Code Practices"] }
+                    ]
+                },
+                {
+                    title: "Invited Talks & Presentations",
+                    items: [
+                        {
+                            title: "Invited Speaker, ICRA 2025 Workshop",
+                            subtitle: "Atlanta, GA",
+                            date: "May 19, 2025",
+                            description: "Hyper-Yoshimura: How a Slight Tweak on a Classical Folding Pattern Unleashes Meta-Stability for Deployable Robots - Part 1: Mathematical Underpinning"
+                        },
+                        {
+                            title: "IDETC-CIE 2024",
+                            subtitle: "Washington DC",
+                            date: "Aug 27, 2024",
+                            description: "Applying the Golden Ratio to Yoshimura Origami Structures"
+                        },
+                        {
+                            title: "Southeast Regional SICB Meeting 2023",
+                            subtitle: "",
+                            date: "Nov 4, 2023",
+                            description: "How Snakes Regulate Weight Distribution to Compensate for the Lack of Frictional Anisotropy"
+                        }
+                    ]
+                },
+                {
+                    title: "Awards & Recognition",
+                    items: [
+                        {
+                            description: "<strong>Pratt Fellowship</strong> - Dept. of Biomedical Engineering and Mechanics, Virginia Tech (2022)"
+                        },
+                        {
+                            description: "<strong>Top 10%</strong> - Indian National Physics Olympiad and Astronomy Olympiad"
+                        },
+                        {
+                            description: "<strong>99.27th percentile</strong> - JEE Mains among 1.4 million test-takers"
+                        },
+                        {
+                            description: "<strong>CMI Admission</strong> - Offered fully-funded B.Sc. Hons in Mathematics at Chennai Mathematical Institute, among top 70 students nationwide"
+                        }
+                    ]
+                }
+            ]
+        },
+        "physics-computing": {
+            title: "Computational Physicist | Physics Simulation Specialist | High-Performance Computing Engineer",
+            summary: "Computational physicist specializing in physics-based simulation, numerical modeling, and high-performance computing for complex dynamical systems. Expertise in developing GPU-accelerated simulation frameworks for nonlinear mechanics, multibody dynamics, and deployable structures. Strong background in reduced-order modeling, parallel computing, and real-time visualization of large-scale physical phenomena. Proven ability to bridge theoretical physics with computational implementation for robotics and materials science applications.",
+            sections: [
+                {
+                    title: "Computational Physics Projects & Research",
+                    items: [
+                        {
+                            title: "PhalcoPulse: Real-Time Physics Visualization Engine",
+                            subtitle: "Independent Project | Python, PyOpenGL",
+                            date: "Oct 2025 - Present",
+                            description: "• Developed lightweight real-time 3D visualization engine built on PyOpenGL, designed for rapid prototyping of scientific simulations and physics-based animations<br>• Implemented extensible scene-based architecture allowing users to inherit and customize scenes via clean object-oriented API<br>• Integrated interactive GUI overlay with real-time controls (sliders, buttons) for manipulating simulation parameters<br>• Designed responsive camera controls and adaptive 3D environments with dynamic grids and reference axes<br>• <strong>Applications:</strong> Scientific simulations, educational visual tools, robotics demonstrations<br>• GitHub: Open-source distribution with installation scripts"
+                        },
+                        {
+                            title: "High-Speed Origami Dynamics Simulation Framework",
+                            subtitle: "Virginia Tech - Ph.D. Research",
+                            date: "May 2023 - Present",
+                            description: "• Developed reduced-order bar-hinge dynamic model for efficient numerical simulation of deployable origami structures<br>• Implemented parallel processing techniques enabling large-scale simulations (10,000+ elements) at interactive rates<br>• Created GPU-accelerated computing pipeline using PyCuda achieving <strong>100x speedup</strong> over CPU implementation<br>• Developed 3D animator for real-time visualization and parameter tuning with immediate visual feedback<br>• Validated numerical models through experimental benchmarking and convergence studies<br>• <strong>Physics:</strong> Nonlinear dynamics, multibody systems, contact mechanics, energy dissipation<br>• <strong>Tech Stack:</strong> Python, NumPy, PyCuda, PyOpenGL, custom numerical integrators"
+                        },
+                        {
+                            title: "Physical Reservoir Computing with Mechanical Systems",
+                            subtitle: "Virginia Tech - DARE Lab",
+                            date: "2023 - Present",
+                            description: "• Investigated origami-inspired mechanical systems as physical reservoirs for computation, exploiting nonlinear dynamics and memory effects<br>• Developed streamlined computational framework for analyzing high-dimensional mechanical state spaces<br>• Implemented sensor placement optimization algorithms to enhance computational efficiency and observability<br>• Created data analysis pipelines for time-series prediction and pattern recognition using mechanical responses<br>• <strong>Core Physics:</strong> Nonlinear dynamics, bifurcation theory, chaos, attractor reconstruction<br>• <strong>Computing:</strong> High-dimensional phase space analysis, machine learning integration"
+                        },
+                        {
+                            title: "Nonholonomic Dynamics: Chaplygin Sleigh with Rotor",
+                            subtitle: "Virginia Tech - Graduate Coursework Project",
+                            date: "2023",
+                            description: "• Analyzed nonholonomic mechanical system exhibiting transitions from steady to chaotic trajectories<br>• Derived equations of motion using Lagrangian mechanics with nonholonomic constraints<br>• Implemented high-fidelity numerical integration schemes (RK4, adaptive step-size) for long-time simulations<br>• Developed real-time phase space visualization tools for exploring bifurcations and strange attractors<br>• Characterized chaotic behavior through Lyapunov exponents, Poincaré sections, and power spectra<br>• <strong>Performance:</strong> Rendering 100K+ trajectory points at 60 FPS<br>• <strong>Methods:</strong> Hamiltonian mechanics, symplectic integrators, chaos diagnostics"
+                        },
+                        {
+                            title: "Snake Locomotion: Analytical & Numerical Framework",
+                            subtitle: "Virginia Tech - M.S. Thesis + Ph.D. Research",
+                            date: "2019 - 2024",
+                            description: "• Developed comprehensive analytical and numerical framework for snake robot locomotion optimization<br>• Implemented variational calculus approach to derive optimal friction coefficient modulation strategies<br>• Created high-fidelity multibody dynamics simulator with anisotropic friction models<br>• Designed numerical optimization algorithms (gradient descent, genetic algorithms) for gait parameter tuning<br>• Validated theoretical predictions through extensive experimental testing with physical snake robot<br>• <strong>Physics Core:</strong> Lagrangian mechanics, friction modeling, contact dynamics, optimal control<br>• <strong>Published:</strong> Philosophical Transactions A (Accepted)<br>• <strong>Tech:</strong> MATLAB, Python, Arduino, real-time control systems"
+                        },
+                        {
+                            title: "Cellular Automata for Biological Pattern Formation",
+                            subtitle: "Virginia Tech - Graduate Coursework",
+                            date: "Aug 2023 - Dec 2023",
+                            description: "• Investigated cellular automata (CA) as reduced-order modeling technique for complex biological phenomena<br>• Implemented deterministic automata for modeling waves, predator-prey dynamics, and spatial pattern formation<br>• Developed analytical methods incorporating pattern identification through convolution-based image processing<br>• Created high-speed parallel implementations for large-scale lattice simulations<br>• <strong>Applications:</strong> Excitable media, reaction-diffusion systems, morphogenesis<br>• <strong>Computational:</strong> Vectorized operations, GPU acceleration, pattern analysis algorithms"
+                        },
+                        {
+                            title: "Cable-Driven Flexible Manipulator Simulation",
+                            subtitle: "National University of Singapore - Remote Internship",
+                            date: "May 2018 - Sept 2018",
+                            description: "• Developed mathematical models for cable-driven continuum manipulators using Cosserat rod theory<br>• Implemented numerical simulation framework in MATLAB Simulink for multi-cable systems<br>• Analyzed manipulator performance under various loading conditions and cable tension distributions<br>• Created visualization tools for deformed configurations and stress distributions<br>• <strong>Physics:</strong> Continuum mechanics, beam theory, constrained dynamics"
+                        }
+                    ]
+                },
+                {
+                    title: "Technical Skills - Physics Computing",
+                    skills: [
+                        { category: "Physics Simulation", items: ["Multibody Dynamics", "Continuum Mechanics", "Contact Mechanics", "Nonlinear Dynamics", "Hamiltonian Systems", "Lagrangian Mechanics"] },
+                        { category: "Numerical Methods", items: ["ODE/PDE Solvers", "Symplectic Integrators", "Adaptive Time-Stepping", "Finite Element Methods", "Reduced-Order Modeling", "Spectral Methods"] },
+                        { category: "High-Performance Computing", items: ["GPU Computing (CUDA/PyCuda)", "Parallel Processing", "Vectorization", "Memory Optimization", "Cache Efficiency"] },
+                        { category: "Scientific Computing", items: ["Python (NumPy, SciPy)", "MATLAB", "Mathematica", "C++ (Performance-Critical)", "Fortran (Legacy Code)"] },
+                        { category: "Visualization", items: ["PyOpenGL", "Real-Time Rendering", "Scientific Visualization", "Matplotlib", "Interactive 3D Graphics"] },
+                        { category: "Physics Analysis", items: ["Phase Space Analysis", "Bifurcation Theory", "Chaos Diagnostics", "Lyapunov Exponents", "Poincaré Sections", "Energy Methods"] },
+                        { category: "Software Engineering", items: ["Git/Version Control", "Code Profiling", "Algorithm Optimization", "Unit Testing", "Documentation"] }
+                    ]
+                },
+                {
+                    title: "Relevant Coursework & Training",
+                    items: [
+                        {
+                            title: "Graduate-Level Physics & Mathematics",
+                            description: "• Introduction to Continuum Mechanics (ESM 5014)<br>• Intermediate Dynamics (ESM 5314)<br>• Nonlinear Dynamics and Chaos (ESM 4114)<br>• Introduction to Solid Mechanics (ESM 5024)<br>• Introduction to Fluid Mechanics (ESM 5054)<br>• Ordinary Differential Equations (MATH 5245)<br>• Mathematical Methods for Modeling and Simulation of Biological Systems (MATH 5515)"
+                        },
+                        {
+                            title: "Computational & Numerical Methods",
+                            description: "• Numerical Methods (VNIT; MAL205)<br>• Numerical Linear Algebra (VNIT; MAL403)<br>• High-Performance Scientific Computing (Self-Study)<br>• GPU Programming with CUDA (Online Certification)"
+                        }
+                    ]
+                },
+                {
+                    title: "Performance Benchmarks & Achievements",
+                    items: [
+                        {
+                            description: "<strong>Simulation Speed:</strong> 100x acceleration through GPU computing for origami dynamics"
+                        },
+                        {
+                            description: "<strong>Scale:</strong> Real-time simulation of systems with 10,000+ degrees of freedom"
+                        },
+                        {
+                            description: "<strong>Visualization:</strong> 60 FPS rendering of 100K+ particles in chaotic system phase space"
+                        },
+                        {
+                            description: "<strong>Open Source:</strong> PhalcoPulse visualization engine available on GitHub"
+                        },
+                        {
+                            description: "<strong>Publications:</strong> Physics simulation work published in top-tier journals (Phil. Trans. A)"
+                        }
+                    ]
+                },
+                {
+                    title: "Education",
+                    items: [
+                        {
+                            title: "Ph.D. in Engineering Mechanics (Computational Physics Focus)",
+                            subtitle: "Virginia Tech",
+                            date: "2022 - Present",
+                            description: "Focus: Physics-based simulation, nonlinear dynamics, computational mechanics, high-performance computing"
+                        },
+                        {
+                            title: "M.S. in Engineering Mechanics",
+                            subtitle: "Virginia Tech",
+                            date: "2025",
+                            description: "Thesis: Analytical and numerical framework for snake robot locomotion optimization"
+                        },
+                        {
+                            title: "B.Tech in Electrical Engineering",
+                            subtitle: "VNIT Nagpur",
+                            date: "2020",
+                            description: "Strong foundation in mathematical physics, numerical methods, and computational techniques"
+                        }
+                    ]
+                }
+            ]
+        },
+        software: {
+            title: "Software Engineer | Research Software Developer | Systems Programmer",
+            summary: "Software engineer with 6+ years of experience developing high-performance scientific computing applications, robotics software, and research tools. Expertise in Python, C++, and MATLAB with strong foundations in algorithms, data structures, and software architecture. Proven track record building complex systems from UAV navigation stacks to GPU-accelerated physics simulations. Open-source contributor with 100+ GitHub stars across projects. Experienced in full software development lifecycle from requirements to deployment.",
+            sections: [
+                {
+                    title: "Professional Experience",
+                    items: [
+                        {
+                            title: "Head of UAV Navigation & Control Systems",
+                            subtitle: "Octobotics Tech, Noida, India",
+                            date: "Jan 2021 - June 2022",
+                            description: "• Spearheaded the development of software architecture for high payload UAVs, focusing on localization, control, and navigation<br>• Engineered control software for an aerial robotic platform, incorporating robotic manipulators and wall climbing capabilities<br>• Designed and implemented experimental setups for comprehensive hardware and software testing<br>• Managed team of engineers, conducted code reviews, established coding standards<br>• <strong>Technologies:</strong> C++, Python, ROS, OpenCV, ArduPilot, Git, Docker"
+                        },
+                        {
+                            title: "Robotics Engineering Intern",
+                            subtitle: "FlytBase Labs, Pune, India",
+                            date: "Dec 2020 - June 2021",
+                            description: "• Contributed to the development of an Indoor Navigation Stack, leveraging ORB-SLAM, Autonomous Barcode Detection, Localization and data logging<br>• Developed C++ and Python SDKs enabling seamless interaction between FlytNow software and other Drone Docking Stations<br>• Engineered a local video streaming platform based on WebRTC and RTSP video streaming protocols<br>• Reduced docking failure rate from 15% to <2% through sensor fusion algorithms<br>• <strong>Tech Stack:</strong> C++17, Python 3, ROS, OpenCV, ORB-SLAM2, Docker"
+                        },
+                        {
+                            title: "Graduate Research Assistant - Software Development",
+                            subtitle: "Virginia Tech DARE Lab",
+                            date: "Aug 2022 - Present",
+                            description: "• Developed high-performance simulation framework for nonlinear dynamics research<br>• Built Python/MATLAB libraries for biomechanics analysis (50+ functions, 2000+ lines)<br>• Created GPU-accelerated computing pipeline using PyCuda (100x speedup achieved)<br>• Implemented version control and testing workflows for lab software projects<br>• Maintained and extended legacy MATLAB codebase (10,000+ lines)<br>• <strong>Technologies:</strong> Python, MATLAB, Git, PyCuda, NumPy, SciPy, PyOpenGL"
+                        }
+                    ]
+                },
+                {
+                    title: "Key Software Projects",
+                    items: [
+                        {
+                            title: "PhalcoPulse: 3D Graphics & Physics Engine",
+                            subtitle: "Python, PyOpenGL | Open Source",
+                            date: "Oct 2025 - Present",
+                            description: "• Architected lightweight real-time 3D visualization engine with custom rendering pipeline<br>• Implemented scene-based architecture with extensible object-oriented API<br>• Built comprehensive API documentation and example projects<br>• Designed for rapid prototyping of scientific simulations and educational tools<br>• 2000+ lines of clean, well-documented Python code<br>• Active maintenance and feature development<br>• <strong>GitHub:</strong> Available for open-source distribution"
+                        },
+                        {
+                            title: "Origami Dynamics Simulation Framework",
+                            subtitle: "Python, NumPy, PyCuda",
+                            date: "2023 - Present",
+                            description: "• Built modular simulation framework for deployable structures<br>• Implemented GPU-accelerated numerical integrators (RK4, adaptive step-size)<br>• Created data analysis pipeline for high-dimensional mechanical systems<br>• Designed for extensibility and research reproducibility<br>• Performance optimization: 100x speedup through GPU computing<br>• Used in multiple peer-reviewed publications"
+                        },
+                        {
+                            title: "Snake Robot Locomotion Simulation Suite",
+                            subtitle: "MATLAB | 38 GitHub Stars",
+                            date: "2019 - 2024",
+                            description: "• Implemented various snake gait algorithms (lateral undulation, sidewinding)<br>• Built modular simulation framework with plug-and-play gait controllers<br>• Created visualization tools for gait analysis and parameter optimization<br>• Most popular project in portfolio, actively used by other researchers worldwide<br>• Comprehensive documentation and example scripts<br>• Published results in Philosophical Transactions A"
+                        },
+                        {
+                            title: "Multi-Robot Decentralized Localization System",
+                            subtitle: "MATLAB | Published IEEE INOCON 2020",
+                            date: "2018 - 2019",
+                            description: "• Designed decentralized localization algorithm using RSS and tetrahedral geometry<br>• Implemented particle filter for multi-robot state estimation<br>• Achieved <5cm accuracy in real-world experiments with 4-robot system<br>• Published peer-reviewed paper and open-sourced complete implementation<br>• Clean, modular code with extensive comments"
+                        },
+                        {
+                            title: "Autonomous Delivery Robot Navigation System",
+                            subtitle: "Python, ROS, C++ | Bachelor's Thesis",
+                            date: "2019 - 2020",
+                            description: "• Developed full autonomous navigation system from scratch<br>• Implemented SLAM, path planning (A*, DWA), and obstacle avoidance<br>• Created ROS-based software architecture with 10+ custom nodes<br>• Hardware integration: LIDAR, IMU, encoders, motor controllers<br>• Published on arXiv, demonstrated real-world package delivery on campus<br>• Complete system design, implementation, and testing"
+                        }
+                    ]
+                },
+                {
+                    title: "Technical Skills - Software Engineering",
+                    skills: [
+                        { category: "Languages", items: ["Python (Expert)", "C/C++ (Proficient)", "MATLAB (Expert)", "JavaScript", "Bash/Shell", "SQL"] },
+                        { category: "Frameworks/Libraries", items: ["NumPy/SciPy", "OpenCV", "ROS/ROS2", "PyOpenGL", "PyCuda", "Pandas", "Matplotlib"] },
+                        { category: "Software Engineering", items: ["Git/GitHub", "Agile/Scrum", "Code Review", "Unit Testing", "Documentation", "Design Patterns"] },
+                        { category: "Algorithms & DS", items: ["Graph Algorithms", "Dynamic Programming", "Optimization", "Numerical Methods", "Data Structures"] },
+                        { category: "Systems", items: ["Linux/Unix", "Docker", "Embedded Systems", "Multi-threading", "Memory Management", "Performance Profiling"] },
+                        { category: "Scientific Computing", items: ["GPU Computing", "Parallel Processing", "Numerical Analysis", "Physics Simulation", "High-Performance Computing"] }
+                    ]
+                },
+                {
+                    title: "Education",
+                    items: [
+                        {
+                            title: "Ph.D. in Engineering Mechanics (Computational Focus)",
+                            subtitle: "Virginia Tech",
+                            date: "2022 - Present",
+                            description: "Advanced coursework in algorithms, numerical methods, and scientific computing. Heavy emphasis on software development for research applications."
+                        },
+                        {
+                            title: "M.S. in Engineering Mechanics",
+                            subtitle: "Virginia Tech",
+                            date: "2025",
+                            description: "Thesis involved extensive software development for simulation and optimization"
+                        },
+                        {
+                            title: "B.Tech in Electrical Engineering",
+                            subtitle: "VNIT Nagpur, India",
+                            date: "2020",
+                            description: "Strong foundation in programming, algorithms, and software engineering principles"
+                        }
+                    ]
+                },
+                {
+                    title: "Open Source & Impact",
+                    items: [
+                        {
+                            description: "<strong>GitHub:</strong> 100+ stars across projects, active open-source contributor"
+                        },
+                        {
+                            description: "<strong>Code Quality:</strong> Strong emphasis on clean code, documentation, and testing"
+                        },
+                        {
+                            description: "<strong>Impact:</strong> Software used by research groups internationally"
+                        },
+                        {
+                            description: "<strong>Publications:</strong> 14+ research papers with accompanying open-source implementations"
+                        }
+                    ]
+                }
+            ]
+        },
+        robotics: {
+            title: "Robotics Engineer | Autonomous Systems Developer | Mechatronics Specialist",
+            summary: "Robotics engineer with extensive experience in autonomous systems, robot control, and mechatronics. Expertise spans bio-inspired robotics, UAV navigation, manipulator control, and deployable robotic structures. Proven track record developing complete robotic systems from concept to deployment. Strong background in ROS, embedded systems, and hardware-software integration. Published researcher with hands-on experience in industrial robotics applications including high-payload UAVs and autonomous delivery systems.",
+            sections: [
+                {
+                    title: "Professional Experience",
+                    items: [
+                        {
+                            title: "Head of Development and Operations - Navigation and Control for High Payload UAVs",
+                            subtitle: "Octobotics Tech, Noida, India",
+                            date: "Jan 2021 - June 2022",
+                            description: "• Spearheaded the development of software architecture for high payload UAVs (50kg+ capacity)<br>• Engineered control software for aerial robotic platform with manipulators and wall-climbing capabilities<br>• Designed experimental setups for hardware and software testing of robotic platforms<br>• Implemented localization algorithms combining GPS, IMU, and vision-based SLAM<br>• Led team of 3 engineers in developing autonomous control systems<br>• <strong>Systems:</strong> Industrial UAVs, Robotic Manipulators, Aerial Wall Climbers"
+                        },
+                        {
+                            title: "Robotics Engineering Intern",
+                            subtitle: "FlytBase Labs, Pune, India",
+                            date: "Dec 2020 - June 2021",
+                            description: "• Developed Indoor Navigation Stack leveraging ORB-SLAM for GPS-denied environments<br>• Implemented autonomous barcode detection, localization, and data logging systems<br>• Created C++ and Python SDKs for drone hardware interfacing and control<br>• Engineered autonomous docking station software achieving sub-centimeter accuracy<br>• Reduced docking failure rate from 15% to <2% through sensor fusion<br>• <strong>Technologies:</strong> ROS, ORB-SLAM, Computer Vision, Autonomous Navigation"
+                        },
+                        {
+                            title: "Graduate Research Assistant - Bio-Inspired Robotics",
+                            subtitle: "Virginia Tech DARE Lab",
+                            date: "Aug 2022 - Present",
+                            description: "• Developing intelligent and adaptive robotic structures using origami-inspired designs<br>• Created deployable robotic systems with programmable stiffness and reconfigurability<br>• Designed and tested snake robot locomotion algorithms with experimental validation<br>• Integrated geometry, mechanics, and computation for novel robotic architectures<br>• <strong>Focus:</strong> Bio-Inspired Robots, Deployable Structures, Soft Robotics, Snake Robots"
+                        }
+                    ]
+                },
+                {
+                    title: "Key Robotics Projects",
+                    items: [
+                        {
+                            title: "Snake Robot Locomotion Optimization",
+                            subtitle: "Virginia Tech - M.S. Thesis & Ph.D. Research",
+                            date: "2019 - 2024",
+                            description: "• Designed and built snake robot with 12 DoF for locomotion research<br>• Developed Arduino-MATLAB-based controller for real-time gait control<br>• Implemented semi-supervised experimental setup for iterative kinematic optimization<br>• Optimized movements for maximum displacement under anisotropic friction conditions<br>• Published analytical framework in Philosophical Transactions A<br>• Validated theoretical predictions through extensive hardware experiments<br>• <strong>Hardware:</strong> Custom snake robot, Force sensors, Motion capture system"
+                        },
+                        {
+                            title: "Hyper-Yoshimura Deployable Robotic Structures",
+                            subtitle: "Virginia Tech - Ph.D. Research (Submitted to Science Advances)",
+                            date: "2023 - Present",
+                            description: "• Developed novel origami-inspired deployable robot with programmable meta-stability<br>• Created mechanical design enabling massive reconfigurability (100+ stable states)<br>• Fabricated prototypes using 3D printing and laser cutting<br>• Characterized deployment trajectories and force-displacement relationships experimentally<br>• Applications: Space structures, surgical devices, deployable robotics<br>• <strong>Innovation:</strong> Geometric tweak on classical pattern enabling new capabilities"
+                        },
+                        {
+                            title: "Autonomous Delivery Robot",
+                            subtitle: "VNIT Nagpur - Bachelor's Thesis",
+                            date: "July 2019 - Aug 2020",
+                            description: "• Designed and developed complete hardware prototype with dedicated localization system<br>• Developed ROS package for autonomous navigation between waypoints<br>• Implemented obstacle detection and avoidance within university campus<br>• Hardware: LIDAR, IMU, wheel encoders, onboard processing (Raspberry Pi)<br>• Real-world testing: Successfully delivered packages across campus<br>• <strong>Published:</strong> arXiv preprint arXiv:2103.09229"
+                        },
+                        {
+                            title: "OSWalT - Omnidirectional Spherical Wall Traversing Robot",
+                            subtitle: "IvLabs, VNIT Nagpur",
+                            date: "Feb 2018 - Dec 2018",
+                            description: "• Designed wall climber robot creating adhesion independent of surface inclination<br>• Used propeller thrust for surface attachment (no vacuum/magnets required)<br>• Developed functioning prototype with omnidirectional mobility<br>• Mechanical design, fabrication, and testing of novel locomotion concept<br>• <strong>Published:</strong> ICRA 2018, Brisbane Australia<br>• <strong>Innovation:</strong> Thrust-based adhesion for universal surface climbing"
+                        },
+                        {
+                            title: "Self-Reconfigurable Transformer Robot",
+                            subtitle: "IvLabs, VNIT Nagpur",
+                            date: "Nov 2017 - May 2018",
+                            description: "• Developed bio-inspired modular self-assembling robot<br>• Fabricated 4 DoF snake modules capable of combining into long chains<br>• Achieved morphology adaptation for traversing rough terrains<br>• Implemented gait study and visual state estimation using AprilTags in ROS<br>• <strong>Published:</strong> ICRA 2018, Brisbane Australia<br>• <strong>Concept:</strong> Modular robots that reconfigure for different tasks"
+                        },
+                        {
+                            title: "Multi-Robot Decentralized Localization System",
+                            subtitle: "IvLabs, VNIT Nagpur",
+                            date: "Dec 2018 - Jan 2019",
+                            description: "• Implemented decentralized localization for 4-robot swarm<br>• Hardware: Custom Arduino-based robots with XBee wireless modules<br>• Achieved <5cm localization accuracy using RSS and tetrahedral geometry<br>• Real-world experiments with obstacle avoidance and formation control<br>• <strong>Published:</strong> IEEE INOCON 2020"
+                        }
+                    ]
+                },
+                {
+                    title: "Technical Skills - Robotics & Hardware",
+                    skills: [
+                        { category: "Control Systems", items: ["PID Control", "State-Space Control", "Trajectory Planning", "Motion Planning (A*, RRT)", "Optimal Control", "Model Predictive Control"] },
+                        { category: "Robotics Software", items: ["ROS/ROS2", "SLAM (ORB-SLAM)", "Navigation Stack", "MoveIt", "Gazebo Simulation", "VREP"] },
+                        { category: "Hardware Platforms", items: ["Arduino", "Raspberry Pi", "NVIDIA Jetson", "STM32", "PX4/ArduPilot", "Custom PCB Design"] },
+                        { category: "Sensors", items: ["LIDAR", "IMU", "RGB-D Cameras", "Force/Torque Sensors", "Encoders", "Ultrasonic", "GPS"] },
+                        { category: "CAD & Fabrication", items: ["SolidWorks (Expert)", "Fusion 360", "Catia", "3D Printing", "Laser Cutting", "Rapid Prototyping"] },
+                        { category: "Electronics", items: ["Circuit Design", "PCB Design (Eagle)", "Motor Control", "Power Electronics", "Embedded Systems"] },
+                        { category: "Programming", items: ["C/C++", "Python", "MATLAB", "Embedded C", "Real-time Systems"] },
+                        { category: "UAV Specific", items: ["Flight Controllers", "Autopilot Tuning", "Mission Planning", "Sensor Fusion", "ArduPilot/PX4"] }
+                    ]
+                },
+                {
+                    title: "Education",
+                    items: [
+                        {
+                            title: "Ph.D. in Engineering Mechanics (Robotics Focus)",
+                            subtitle: "Virginia Tech",
+                            date: "2022 - Present",
+                            description: "Research: Bio-inspired robotics, snake robots, origami robotics, deployable structures, soft robotics"
+                        },
+                        {
+                            title: "M.S. in Engineering Mechanics",
+                            subtitle: "Virginia Tech",
+                            date: "2025",
+                            description: "Thesis: Snake robot locomotion optimization with experimental validation using physical hardware"
+                        },
+                        {
+                            title: "B.Tech in Electrical and Electronics Engineering",
+                            subtitle: "VNIT Nagpur, India",
+                            date: "2020",
+                            description: "Focus: Robotics, Control Systems, Embedded Systems, Power Electronics, Autonomous Systems"
+                        }
+                    ]
+                },
+                {
+                    title: "Publications & Impact",
+                    items: [
+                        {
+                            description: "<strong>Publications:</strong> 14+ papers on robotics including snake locomotion, deployable structures, autonomous systems, and wall-climbing robots"
+                        },
+                        {
+                            description: "<strong>Conferences:</strong> ICRA 2018 (2 papers), IEEE INOCON 2020, IDETC-CIE 2024, SMASIS 2025"
+                        },
+                        {
+                            description: "<strong>Field Experience:</strong> Industrial UAV deployment, warehouse automation, outdoor robot testing in real-world conditions"
+                        },
+                        {
+                            description: "<strong>Hardware Expertise:</strong> Designed, fabricated, and tested 5+ complete robotic systems from scratch"
+                        }
+                    ]
+                }
+            ]
+        },
+        "research-industry": {
+            title: "Research Scientist | Applied Researcher | Machine Learning Engineer",
+            summary: "Research scientist with expertise at the intersection of computational mechanics, machine learning, and robotics. Ph.D. candidate with 14+ publications in top-tier venues (Philosophical Transactions A, Science Advances submission). Specialized in physical reservoir computing, nonlinear dynamics, and bio-inspired systems with proven ability to transition theoretical research into practical applications. Strong software engineering background with production-level code in Python, C++, and MATLAB. Experienced in developing novel algorithms, conducting large-scale simulations, and collaborating with cross-functional teams.",
+            sections: [
+                {
+                    title: "Research Experience & Impact",
+                    items: [
+                        {
+                            title: "Ph.D. Researcher - Physical Intelligence & Computing",
+                            subtitle: "Virginia Tech DARE Lab",
+                            date: "Aug 2022 - Present",
+                            description: "• Leading research on <strong>physical reservoir computing</strong> using mechanical systems as computational substrates<br>• Developed novel computational paradigm leveraging nonlinear dynamics of origami structures for pattern recognition and time-series prediction<br>• Published in top-tier journal (Philosophical Transactions A) and submitted to <strong>Science Advances</strong><br>• Created high-performance simulation framework achieving <strong>100x speedup</strong> via GPU acceleration<br>• Collaborating with Materials Science and Computer Science departments on interdisciplinary projects<br>• <strong>Research Areas:</strong> Machine Learning, Nonlinear Dynamics, Physical Computing, Soft Robotics, Mechano-Intelligence"
+                        },
+                        {
+                            title: "Applied Robotics Research",
+                            subtitle: "Virginia Tech + Industry Collaborations",
+                            date: "2019 - Present",
+                            description: "• Developed optimization framework for snake robot locomotion published in <strong>Philosophical Transactions A</strong><br>• Created analytical models validated through extensive experimental testing with physical hardware<br>• Transitioned theoretical work into practical control algorithms for robotic systems<br>• Collaborated with Octobotics Tech on UAV control systems for industrial applications<br>• Algorithms deployed in real industrial robotics applications<br>• <strong>Impact:</strong> Work cited by leading robotics research groups internationally"
+                        },
+                        {
+                            title: "Research Internships",
+                            subtitle: "Virginia Tech (2019), National University of Singapore (2018)",
+                            date: "2018 - 2019",
+                            description: "• VT: Pioneered research on snake robot optimization (led to Ph.D. admission and fellowship)<br>• NUS: Developed mathematical models for cable-driven flexible manipulators<br>• Published open-source implementations gaining 50+ GitHub stars collectively<br>• Demonstrated ability to quickly ramp up and deliver results in new research areas"
+                        }
+                    ]
+                },
+                {
+                    title: "Key Research Contributions & Publications",
+                    items: [
+                        {
+                            title: "Physical Reservoir Computing (Ongoing)",
+                            subtitle: "Novel ML Paradigm Using Mechanical Systems",
+                            description: "• Pioneering use of origami structures as physical computing substrates<br>• Demonstrated pattern recognition and time-series prediction using nonlinear mechanics<br>• Developed theory connecting mechanical design to computational capability<br>• Conference Paper: SMASIS 2025<br>• Target: Nature Machine Intelligence or Science Robotics publication"
+                        },
+                        {
+                            title: "Hyper Yoshimura Origami (Submitted to Science Advances)",
+                            subtitle: "Novel Deployable Structure with Programmable Meta-Stability",
+                            description: "• Invented new folding pattern with controllable deployment trajectories<br>• Combines geometric design with mechanical programming<br>• Applications: Space structures, surgical devices, deployable robotics<br>• Preprint: arXiv (Available)<br>• Co-authored with interdisciplinary team from ME, Materials Science, and CS"
+                        },
+                        {
+                            title: "Optimal Snake Locomotion (Phil. Trans. A, Accepted 2024)",
+                            subtitle: "Analytical Framework for Robotic Gait Optimization",
+                            description: "• Established variational framework solving long-standing optimization problem<br>• Derived closed-form solutions for friction coefficient modulation<br>• Experimental validation with snake robot platform<br>• Cited by leading robotics groups internationally<br>• Preprint: arXiv:2412.03725"
+                        },
+                        {
+                            title: "Golden Ratio Yoshimura (Phil. Trans. A, 2024)",
+                            subtitle: "Meta-Stable Deployable Structures",
+                            description: "• Explored golden ratio principles in origami design<br>• Demonstrated massive reconfigurability in deployable structures<br>• Published in Royal Society journal<br>• Presented at IDETC-CIE 2024 (premier international design conference)"
+                        }
+                    ]
+                },
+                {
+                    title: "Industry Experience",
+                    items: [
+                        {
+                            title: "Head of UAV Navigation & Control",
+                            subtitle: "Octobotics Tech, Noida, India",
+                            date: "Jan 2021 - June 2022",
+                            description: "• Led software architecture development for industrial UAV platform (50kg payload)<br>• Applied research insights to real-world control problems<br>• Bridged academic research and production systems<br>• Managed team of 3 engineers, established coding standards and best practices"
+                        },
+                        {
+                            title: "Robotics Software Engineer Intern",
+                            subtitle: "FlytBase Labs, Pune, India",
+                            date: "Dec 2020 - June 2021",
+                            description: "• Developed indoor navigation stack using SLAM for GPS-denied environments<br>• Created production-quality C++/Python SDKs for commercial drone systems<br>• Reduced system failure rate from 15% to <2% through algorithmic improvements<br>• Experience translating research concepts into production code"
+                        }
+                    ]
+                },
+                {
+                    title: "Technical Skills - Research & ML",
+                    skills: [
+                        { category: "Machine Learning", items: ["Reservoir Computing", "Neural Networks", "Time-Series Analysis", "Pattern Recognition", "Optimization", "Deep Learning Basics"] },
+                        { category: "Computational", items: ["Python", "MATLAB", "GPU Computing (CUDA)", "High-Performance Computing", "Parallel Computing"] },
+                        { category: "Research Methods", items: ["Nonlinear Dynamics", "Chaos Theory", "Analytical Mechanics", "Numerical Methods", "Bifurcation Analysis", "Experimental Design"] },
+                        { category: "Simulation", items: ["Physics-Based Simulation", "Multibody Dynamics", "Continuum Mechanics", "Reduced-Order Modeling"] },
+                        { category: "Data Science", items: ["Data Analysis", "Statistical Methods", "Visualization (Matplotlib)", "Scientific Computing", "Signal Processing"] },
+                        { category: "Software Engineering", items: ["Git/GitHub", "Clean Code", "Documentation", "Testing", "Code Review", "CI/CD"] },
+                        { category: "Experimental", items: ["Motion Capture", "Force/Torque Sensing", "High-Speed Imaging", "Sensor Integration", "Data Acquisition"] }
+                    ]
+                },
+                {
+                    title: "Research Impact & Recognition",
+                    items: [
+                        {
+                            description: "<strong>Publications:</strong> 14+ peer-reviewed papers across robotics, mechanics, and computational science"
+                        },
+                        {
+                            description: "<strong>Awards:</strong> Pratt Fellowship (2022), Best Presentation - Graduate Seminar (2023)"
+                        },
+                        {
+                            description: "<strong>Conferences:</strong> IDETC-CIE 2024, SMASIS 2025, SICB 2023, ICRA Workshop 2025, multiple invited talks"
+                        },
+                        {
+                            description: "<strong>Open Source:</strong> 5+ research codebases released publicly, 100+ GitHub stars"
+                        },
+                        {
+                            description: "<strong>Collaboration:</strong> Cross-disciplinary work spanning ME, CS, Materials Science departments"
+                        },
+                        {
+                            description: "<strong>Industry Impact:</strong> Research algorithms deployed in commercial robotics systems"
+                        }
+                    ]
+                }
+            ]
+        }
+    };
+
+    let currentProfile = 'academic';
+
+    function renderContent(profile) {
+        const data = profiles[profile];
+        const content = document.getElementById('resume-content');
+        const title = document.getElementById('dynamic-title');
+
+        // Fade out
+        content.classList.add('fade-out');
+
+        setTimeout(() => {
+            title.textContent = data.title;
+
+            let html = `
+                    <div class="section">
+                        <div class="section-title">Professional Summary</div>
+                        <div class="summary">${data.summary}</div>
+                    </div>
+                `;
+
+            data.sections.forEach(section => {
+                html += `<div class="section">`;
+                html += `<div class="section-title">${section.title}</div>`;
+
+                if (section.skills) {
+                    // Skills section
+                    html += `<div class="skills-section">`;
+                    section.skills.forEach(skill => {
+                        html += `
+                                <div class="skill-category">
+                                    <div class="skill-category-title">${skill.category}</div>
+                                    <div class="skill-items">
+                                        ${skill.items.map(item => `<span class="skill-tag">${item}</span>`).join('')}
+                                    </div>
+                                </div>
+                            `;
+                    });
+                    html += `</div>`;
+                } else if (section.items) {
+                    // Regular items
+                    section.items.forEach(item => {
+                        html += `<div class="item">`;
+                        if (item.title) {
+                            html += `
+                                    <div class="item-header">
+                                        <div class="item-title">${item.title}</div>
+                                        ${item.date ? `<div class="item-date">${item.date}</div>` : ''}
+                                    </div>
+                                `;
+                        }
+                        if (item.subtitle) {
+                            html += `<div class="item-subtitle">${item.subtitle}</div>`;
+                        }
+                        if (item.description) {
+                            html += `<div class="item-description">${item.description}</div>`;
+                        }
+                        html += `</div>`;
+                    });
+                }
+
+                html += `</div>`;
+            });
+
+            content.innerHTML = html;
+            content.classList.remove('fade-out');
+            content.classList.add('fade-in');
+        }, 200);
+    }
+
+    // Profile switcher
+    document.querySelectorAll('.profile-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.profile-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            currentProfile = this.dataset.profile;
+            renderContent(currentProfile);
+        });
+    });
+
+    // Initial render
+    renderContent(currentProfile);
+
+    // Print functionality
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+            e.preventDefault();
+            window.print();
+        }
+    });
+</script>
+</body>
+</html>
