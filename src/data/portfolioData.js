@@ -353,6 +353,24 @@ export const stats = [{
 
 // Data for Photography Gallery
 export const photos = [{
+    src: '/images/gallery/7ea6d4078404.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Canopy of Cosmos",
+    description: "A deep blue night sky, twinkling with countless stars, is gracefully framed by the silhouetted branches of trees."
+}, {
+    src: '/images/gallery/2ae92fe1db25.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Crimson Pillars Under Starlit Skies",
+    description: "Vibrant red and orange light pillars majestically ascend towards a sky filled with countless stars above a dark, silhouetted landscape."
+}, {
+    src: '/images/gallery/525ba440f7ff.jpg',
+    width: 1920,
+    height: 2560,
+    title: "Celestial Mirror",
+    description: "The silent darkness of night reveals a serene landscape where starry skies meet still waters, framed by the silhouettes of trees."
+}, {
     src: '/images/gallery/ffb04931e463.jpg',
     width: 1920,
     height: 2560,
