@@ -116,7 +116,7 @@ const About = ({sectionVariants}) => {
                                     className="absolute inset-0 w-full h-full object-contain object-left transform transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:opacity-0"
                                 />
                                 <img
-                                    src="images/Yogesh.png"
+                                    src="images/Yogesh4.png"
                                     alt="Yogesh Phalak Smiling"
                                     className="bsolute inset-0 w-full h-full object-contain object-left transform transition-all duration-500 ease-in-out opacity-0 group-hover:scale-105 group-hover:opacity-100"
                                 />

@@ -38,6 +38,10 @@ const Navigation = ({
                             className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
                         Research
                     </button>
+                    <button onClick={() => scrollToSection('expertise')}
+                            className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
+                        Skills
+                    </button>
                     <button onClick={() => scrollToSection('insights')}
                             className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
                         Insights
