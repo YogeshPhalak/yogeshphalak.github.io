@@ -34,13 +34,13 @@ const Navigation = ({
                             className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
                         Journey
                     </button>
-                    <button onClick={() => scrollToSection('research')}
-                            className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
-                        Research
-                    </button>
                     <button onClick={() => scrollToSection('expertise')}
                             className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
                         Skills
+                    </button>
+                    <button onClick={() => scrollToSection('research')}
+                            className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
+                        Research
                     </button>
                     <button onClick={() => scrollToSection('insights')}
                             className="text-slate-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition">
@@ -89,6 +89,12 @@ const Navigation = ({
                             className="block w-full text-left py-2 px-3 rounded-md hover:bg-slate-200 dark:hover:bg-gray-800 transition-colors"
                         >
                             Journey
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('expertise')}
+                            className="block w-full text-left py-2 px-3 rounded-md hover:bg-slate-200 dark:hover:bg-gray-800 transition-colors"
+                        >
+                            Skills
                         </button>
                         <button
                             onClick={() => scrollToSection('research')}
